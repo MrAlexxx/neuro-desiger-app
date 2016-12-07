@@ -1,5 +1,7 @@
 /**
  * Created by OMalitskyi on 02.12.2016.
+ *
+ * todo - implement loading obj files from "OBJImg" (https://github.com/JordanDelcros/OBJImg)
  */
 
 
@@ -10,27 +12,87 @@
 var manager = new THREE.LoadingManager();
 
 var loader = new THREE.OBJLoader( manager );
-loader.load( '../models/Delphi_Logo4.obj', function ( object ) {
+// loader.load( '../models/Delphi_Logo4.obj', function ( object ) {
+//
+//     object.scale.x = object.scale.y = object.scale.z = 0.002;
+//     console.log(object);
+//     object.position.set(0,0,0.4);
+//     object.rotation.z = .5*Math.PI ;
+//
+//     // object.rotation.x = -.5*Math.PI ;
+//
+//     var logotype = object.children[0];
+//     var text = object.children[1];
+//     logotype.castShadow = true;
+//     text.castShadow = true;
+//
+//     logotype.material = new THREE.MeshPhongMaterial( { color: 0x0a64aa, specular: 0xffffff, shading: 4 } );
+//     text.material = new THREE.MeshPhongMaterial( { color: 0x4b4e4c, specular: 0xffffff, shading: 1 } );
+//
+//     scene.add( object );
+//     // logo = object;
+// });
 
-    object.scale.x = object.scale.y = object.scale.z = 0.002;
+// loader.load( '../models/office_chair.obj', function ( object, material ) {
+//
+//     var mtlLoader = new THREE.MTLLoader();
+//     console.log(material);
+//     mtlLoader.setPath('../models/');
+//     mtlLoader.load(object.materialLibraries[0], function(materials) {
+//         materials.preload();
+//         object.setMaterials(materials);
+//         scene.add(object);
+//     });
+// });
 
-    object.position.set(0,0,0.4);
-    object.rotation.z = .5*Math.PI ;
+// var mtlLoader = new THREE.MTLLoader();
+// mtlLoader.setPath('../models/');
+// mtlLoader.load('office_chair.mtl', function(materials) {
+//     materials.preload();
+//     console.log(materials);
+//     var objLoader = new THREE.OBJLoader();
+//     objLoader.setMaterials(materials);
+//     objLoader.setPath('../models/');
+//     objLoader.load('office_chair.obj', function(object) {
+//         object.scale.x = object.scale.y = object.scale.z = 0.002;
+//         object.position.set(-1,0,0);
+//         object.rotation.x = .5*Math.PI ;
+//         // object.rotation.y = .2*Math.PI ;
+//         scene.add(object);
+//     });
+// });
 
-    // object.rotation.x = -.5*Math.PI ;
 
-    var logotype = object.children[0];
-    var text = object.children[1];
-    logotype.castShadow = true;
-    text.castShadow = true;
+// THREE.Loader.Handlers.add( /\.dds$/i, new THREE.DDSLoader() );
 
-    logotype.material = new THREE.MeshPhongMaterial( { color: 0x0a64aa, specular: 0xffffff, shading: 4 } );
-    text.material = new THREE.MeshPhongMaterial( { color: 0x4b4e4c, specular: 0xffffff, shading: 1 } );
+var mtlLoader = new THREE.MTLLoader();
+mtlLoader.setPath( '../models/' );
+mtlLoader.load( 'Jack Daniels Whiskey.mtl', function( materials ) {
 
-    scene.add( object );
-    // logo = object;
+    materials.preload();
+
+    var objLoader = new THREE.OBJLoader();
+    objLoader.setMaterials( materials );
+    console.log(materials);
+    objLoader.setPath( '../models/' );
+    objLoader.load( 'Jack Daniels Whiskey.obj', function ( object ) {
+        object.scale.x = object.scale.y = object.scale.z = 0.08;
+        object.position.set(1,0,0);
+        object.rotation.x = .5*Math.PI ;
+        scene.add( object );
+
+    }, onProgress, onError );
+
 });
 
+var onProgress = function ( xhr ) {
+    if ( xhr.lengthComputable ) {
+        var percentComplete = xhr.loaded / xhr.total * 100;
+        console.log( Math.round(percentComplete, 2) + '% downloaded' );
+    }
+};
+
+var onError = function ( xhr ) { alert(xhr) };
 
 //todo - upgrade resizing method
 function getResizingCoefficient(){

@@ -8,11 +8,22 @@ var renderer,
     camera,
     object3d;
 
+$(document).ready(function () {
+
+    // handle window resize
+    $(window).on('resize',function () {
+        renderer.setSize( window.innerWidth, window.innerHeight );
+        camera.aspect	= window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix()
+    });
+
+});
+
 
 
 init();
-// animate();
-renderX();
+renderD();
+// renderAR();
 
 
 //////////////////////////////////////////////////////////////////////////////////
@@ -69,7 +80,10 @@ function init() {
 
 }
 
-function renderX() {
+/**
+ * Rendering Augmented reality
+ */
+function renderAR() {
     // handle window resize
     window.addEventListener('resize', function(){
         renderer.setSize( window.innerWidth, window.innerHeight );
@@ -101,9 +115,7 @@ function renderX() {
     doAugmentedReality();
 
 }
-/**
- *
- */
+
 function doAugmentedReality(){
     // init the marker recognition
     var jsArucoMarker	= new THREEx.JsArucoMarker();
@@ -140,6 +152,13 @@ function doAugmentedReality(){
             object3d.visible = true
         })
     });
+}
+
+/**
+ * Default rendering 3d object
+ */
+function renderD() {
+    animate()
 }
 
 function animate() {
