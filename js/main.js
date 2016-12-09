@@ -91,6 +91,9 @@ function renderAR() {
         camera.updateProjectionMatrix()
     }, false);
 
+
+
+
     // set the scene as visible
     scene.visible = false;
 
