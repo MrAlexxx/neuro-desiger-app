@@ -45,6 +45,10 @@ function init() {
 
     // init scene and camera
     scene = new THREE.Scene();
+    //configyrating threeks inspector
+    window.scene = scene;
+    window.THREE = THREE;
+
     camera	= new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 0.01, 2000);
     camera.position.z = 1;
 

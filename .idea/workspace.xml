@@ -2,12 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b33685d-64ff-477f-bbaa-d7525b7e2add" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/Delphi_Logo4.obj" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/Jack Daniels Whiskey.mtl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/Jack Daniels Whiskey.obj" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/Texture/liqour_jack_daniels.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/Texture/rnl_probe.hdr" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/contact-sharing-in-ar/avatars/avatar-0.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/contact-sharing-in-ar/avatars/avatar-236.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/contact-sharing-in-ar/avatars/avatar-265.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/contact-sharing-in-ar/js/badgeInfos.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/contact-sharing-in-ar/js/ui.badgesprite.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/contact-sharing-in-ar/role-icons/designer.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/contact-sharing-in-ar/role-icons/developer.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/contact-sharing-in-ar/role-icons/industry.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/contact-sharing-in-ar/role-icons/other.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/models/Texture/Natuzzi_Maratea_Leather_01_Diffuse.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/models/Texture/Natuzzi_Status_EssentialGray_Leather_01_Reflection.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/material_library.js" afterPath="$PROJECT_DIR$/js/material_library.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/three.model.js" afterPath="$PROJECT_DIR$/js/three.model.js" />
     </list>
     <ignored path="neuro-desiger-app.iws" />
@@ -42,8 +50,8 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1029">
-              <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+            <state relative-caret-position="442">
+              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -52,9 +60,13 @@
       <file leaf-file-name="three.model.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/three.model.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="573">
-              <caret line="65" column="104" selection-start-line="65" selection-start-column="104" selection-end-line="65" selection-end-column="104" />
-              <folding />
+            <state relative-caret-position="340">
+              <caret line="20" column="46" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
+              <folding>
+                <element signature="n#!!doc;n#blendingMaterial#0" expanded="false" />
+                <element signature="n#!!doc;n#creatingMaterial#0" expanded="false" />
+                <element signature="n#!!doc;n#loadingTexture#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -62,8 +74,8 @@
       <file leaf-file-name="material_library.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/material_library.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+            <state relative-caret-position="738">
+              <caret line="180" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
               <folding>
                 <element signature="e#0#47#0" expanded="false" />
               </folding>
@@ -87,8 +99,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/vendor/three.js/lib/OBJLoader.js" />
-        <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/js/material_library.js" />
         <option value="$PROJECT_DIR$/js/three.model.js" />
       </list>
@@ -132,7 +144,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -233,6 +244,24 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="texture" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="neuro-desiger-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="neuro-desiger-app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="js" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -240,6 +269,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -315,12 +345,15 @@
       <workItem from="1481272671313" duration="1218000" />
       <workItem from="1481295964760" duration="1239000" />
       <workItem from="1481539077781" duration="282000" />
-      <workItem from="1481713090782" duration="5353000" />
+      <workItem from="1481713090782" duration="8006000" />
+      <workItem from="1481791049829" duration="423000" />
+      <workItem from="1481875770210" duration="6637000" />
+      <workItem from="1481901268774" duration="1531000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36324000" />
+    <option name="totallyTimeSpent" value="47568000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -335,9 +368,9 @@
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12713936" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13080685" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298731" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298731" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -381,9 +414,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2108">
-          <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+        <state relative-caret-position="442">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/three.model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc;n#blendingMaterial#0" expanded="false" />
+            <element signature="n#!!doc;n#creatingMaterial#0" expanded="false" />
+            <element signature="n#!!doc;n#loadingTexture#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -397,11 +442,79 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/three.model.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+        <state relative-caret-position="68">
+          <caret line="4" column="173" selection-start-line="4" selection-start-column="173" selection-end-line="4" selection-end-column="173" />
+          <folding>
+            <element signature="n#!!doc;n#blendingMaterial#0" expanded="false" />
+            <element signature="n#!!doc;n#creatingMaterial#0" expanded="false" />
+            <element signature="n#!!doc;n#loadingTexture#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/material_library.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#47#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/three.model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="173" selection-start-line="4" selection-start-column="173" selection-end-line="4" selection-end-column="173" />
+          <folding>
+            <element signature="n#!!doc;n#blendingMaterial#0" expanded="false" />
+            <element signature="n#!!doc;n#creatingMaterial#0" expanded="false" />
+            <element signature="n#!!doc;n#loadingTexture#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/material_library.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#47#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -435,7 +548,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
-          <folding />
+          <folding>
+            <element signature="n#!!doc;n#blendingMaterial#0" expanded="false" />
+            <element signature="n#!!doc;n#creatingMaterial#0" expanded="false" />
+            <element signature="n#!!doc;n#loadingTexture#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -469,7 +586,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
-          <folding />
+          <folding>
+            <element signature="n#!!doc;n#blendingMaterial#0" expanded="false" />
+            <element signature="n#!!doc;n#creatingMaterial#0" expanded="false" />
+            <element signature="n#!!doc;n#loadingTexture#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -503,7 +624,49 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+          <folding>
+            <element signature="n#!!doc;n#blendingMaterial#0" expanded="false" />
+            <element signature="n#!!doc;n#creatingMaterial#0" expanded="false" />
+            <element signature="n#!!doc;n#loadingTexture#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2108">
+          <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/material_library.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#47#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/three.model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+          <folding>
+            <element signature="n#!!doc;n#blendingMaterial#0" expanded="false" />
+            <element signature="n#!!doc;n#creatingMaterial#0" expanded="false" />
+            <element signature="n#!!doc;n#loadingTexture#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -527,7 +690,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="n#!!doc;n#blendingMaterial#0" expanded="false" />
+            <element signature="n#!!doc;n#creatingMaterial#0" expanded="false" />
+            <element signature="n#!!doc;n#loadingTexture#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -551,7 +718,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="782">
           <caret line="48" column="7" selection-start-line="48" selection-start-column="7" selection-end-line="48" selection-end-column="7" />
-          <folding />
+          <folding>
+            <element signature="n#!!doc;n#blendingMaterial#0" expanded="false" />
+            <element signature="n#!!doc;n#creatingMaterial#0" expanded="false" />
+            <element signature="n#!!doc;n#loadingTexture#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -575,7 +746,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="782">
           <caret line="48" column="7" selection-start-line="48" selection-start-column="7" selection-end-line="48" selection-end-column="7" />
-          <folding />
+          <folding>
+            <element signature="n#!!doc;n#blendingMaterial#0" expanded="false" />
+            <element signature="n#!!doc;n#creatingMaterial#0" expanded="false" />
+            <element signature="n#!!doc;n#loadingTexture#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -619,7 +794,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="513">
           <caret line="743" column="0" selection-start-line="743" selection-start-column="0" selection-end-line="743" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -645,29 +819,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/material_library.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+        <state relative-caret-position="738">
+          <caret line="180" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
           <folding>
             <element signature="e#0#47#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1029">
-          <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/three.model.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="573">
-          <caret line="65" column="104" selection-start-line="65" selection-start-column="104" selection-end-line="65" selection-end-column="104" />
-          <folding />
+        <state relative-caret-position="340">
+          <caret line="20" column="46" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
+          <folding>
+            <element signature="n#!!doc;n#blendingMaterial#0" expanded="false" />
+            <element signature="n#!!doc;n#creatingMaterial#0" expanded="false" />
+            <element signature="n#!!doc;n#loadingTexture#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

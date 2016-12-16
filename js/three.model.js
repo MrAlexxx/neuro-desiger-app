@@ -2,54 +2,84 @@
  * Created by OMalitskyi on 02.12.2016.
  *
  * todo - implement loading obj files from "OBJImg" (https://github.com/JordanDelcros/OBJImg)
+ * todo - add possibility to compressed Javascript file for more security and decreasing file size as it possible (https://github.com/mrdoob/three.js/wiki/Build-instructions)
  */
 
+
+var path = '../models/';
+
+var loader = new THREE.OBJLoader();
+var material = new THREE.MeshStandardMaterial();
+loader.load( path + '/sofa2.obj', function ( group ) {
+
+    // instantiate a loader
+    var loader = new THREE.TextureLoader();
+
+// load a resource
+    loader.load(
+        // resource URL
+        '../models/texture/leather_diffuse.jpg',
+        // Function when resource is loaded
+        function ( texture ) {
+            // do something with the texture
+            var material = new THREE.MeshBasicMaterial( {
+                map: texture
+            } );
+        },
+        // Function called when download progresses
+        function ( xhr ) {
+            console.log( (xhr.loaded / xhr.total * 100) + '% loaded' );
+        },
+        // Function called when download errors
+        function ( xhr ) {
+            console.log( 'An error happened' );
+        }
+    );
+
+
+    group.traverse( function ( child ) {
+
+        if ( child instanceof THREE.Mesh ) {
+
+            child.material = material;
+            console.log(child);
+        }
+
+    } );
+
+    group.scale.x = group.scale.y = group.scale.z = 0.0002;
+    scene.add( group );
+
+} );
 
 //////////////////////////////////////////////////////////////////////////////////
 //		add an object in the scene
 //////////////////////////////////////////////////////////////////////////////////
 
-var manager = new THREE.LoadingManager();
-
-var loader = new THREE.OBJLoader( manager );
-loader.load( '../models/sofa2.obj', function ( object ) {//sofa1.obj, round_sofa.obj ,sofa3.obj
-
-    object.scale.x = object.scale.y = object.scale.z = 0.002;
-    console.log(object);
-    object.position.set(0,0,0.4);
-    // object.rotation.z = .5*Math.PI ;
-
-    // object.rotation.x = -.5*Math.PI ;
-
-    var logotype = object.children[0];
-    var text = object.children[1];
-    logotype.castShadow = true;
-    text.castShadow = true;
-
-    logotype.material = new THREE.MeshPhongMaterial( { color: 0x0a64aa, specular: 0xffffff, shading: 4 } );
-    text.material = new THREE.MeshPhongMaterial( { color: 0x4b4e4c, specular: 0xffffff, shading: 1 } );
-
-    scene.add( object );
-    // logo = object;
-}, onProgress, onError);
-
-var onProgress = function ( xhr ) {
-    if ( xhr.lengthComputable ) {
-        var percentComplete = xhr.loaded / xhr.total * 100;
-        console.log( Math.round(percentComplete, 2) + '% downloaded' );
-    }
-};
-
-var onError = function ( xhr ) { alert(xhr) };
-
-//todo - upgrade resizing method
-function getResizingCoefficient(){
-    var d =  (window.innerWidth > 1000) ? 1400 : 1000;
-    return window.innerWidth / d;
-}
-
+// var manager = new THREE.LoadingManager();
+// var loader = new THREE.OBJLoader( manager );
+// loader.load( '../models/sofa2.obj', function ( object ) {//sofa1.obj, round_sofa.obj ,sofa3.obj
+//
+//     object.scale.x = object.scale.y = object.scale.z = 0.0002;
+//     // console.log(object);
+//     object.position.set(0,0,0);
+//     // object.rotation.z = .5*Math.PI ;
+//     object.material = new THREE.MeshPhongMaterial( { color: 0x4b4e4c, specular: 0xffffff, shading: 100 } );
+//
+//     blendingMaterial(object);
+//     // var logotype = object.children[0];
+//     // var text = object.children[1];
+//     // logotype.castShadow = true;
+//     // text.castShadow = true;
+//     //
+//     // logotype.material = new THREE.MeshPhongMaterial( { color: 0x0a64aa, specular: 0xffffff, shading: 4 } );
+//     // text.material = new THREE.MeshPhongMaterial( { color: 0x4b4e4c, specular: 0xffffff, shading: 1 } );
+//
+//     scene.add( object );
+// }, onProgress, onError);
 
 // add some debug display
+
 ;(function(){
     var geometry = new THREE.PlaneGeometry(1,1,10,10);
     var material = new THREE.MeshBasicMaterial( {
@@ -61,8 +91,61 @@ function getResizingCoefficient(){
     var mesh = new THREE.AxisHelper;
     scene.add( mesh );
 })();
+// Called when download progresses
+var onProgress = function ( xhr ) {
+    if ( xhr.lengthComputable ) {
+        var percentComplete = xhr.loaded / xhr.total * 100;
+        console.log( Math.round(percentComplete, 2) + '% downloaded' );
+    }
+};
+
+// Called when download errors
+var onError = function ( xhr ) { alert(xhr) };
+
+//todo - upgrade resizing method
+function getResizingCoefficient(){
+    var d =  (window.innerWidth > 1000) ? 1400 : 1000;
+    return window.innerWidth / d;
+}
 
 
+/**
+ * Blending material with object
+ *
+ * @param obj
+ */
+function blendingMaterial(obj) {
+     obj.children.map(function (item) {
+         item.material = creatingMaterial();
+
+         console.log(item);
+     });
+}
+
+/**
+ * Creating material
+ *
+ * @returns {THREE.MeshBasicMaterial|MeshBasicMaterial|*}
+ */
+function creatingMaterial() {
+    var texture = loadingTexture(),
+        material;
+    console.log(texture);
+    texture.repeat.set( 3, 3 );
+    material = new THREE.MeshBasicMaterial( { map: texture } );
+    return material;
+}
+
+/**
+ * Load the desired texture
+ *
+ * @returns { THREE.ImageUtils }
+ */
+function loadingTexture() {
+    var loader = new THREE.TextureLoader;
+     var textureLoader = new THREE.TextureLoader( '../models/texture/leather_diffuse.jpg' );
+    return loader.load('../models/texture/01.jpg');
+}
 ////////////////////////////////**********************************///////////////////////////////////
 
 //
