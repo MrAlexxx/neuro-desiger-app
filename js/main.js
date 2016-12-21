@@ -6,7 +6,13 @@ var renderer,
     onRenderFcts,
     scene,
     camera,
-    object3d;
+    OBJ,
+    lightHelper;
+
+var lightLeft,
+    lightRight,
+    hemiLight,
+    dirLight;
 
 $(document).ready(function () {
 
@@ -45,37 +51,57 @@ function init() {
 
     // init scene and camera
     scene = new THREE.Scene();
-    //configyrating threeks inspector
-    window.scene = scene;
-    window.THREE = THREE;
-
     camera	= new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 0.01, 2000);
-    camera.position.z = 1;
+    camera.position.z = 10;
+    camera.position.y = 5;
 
 
-    //////////////////////////////////////////////////////////////////////////////////
-    //		add lights in the scene
-    //////////////////////////////////////////////////////////////////////////////////
 
-     object3d	= new THREE.AmbientLight(0x101010);
-    object3d.name	= 'Ambient light';
-    scene.add(object3d);
-     object3d	= new THREE.DirectionalLight('white', 0.225);
-    object3d.position.set(2.6,-3,1);
-    object3d.name	= 'Back light';
-    scene.add(object3d);
-     object3d	= new THREE.DirectionalLight('white', 0.375);
-    object3d.position.set(-2, 0, -1);
-    object3d.name 	= 'Key light';
-    scene.add(object3d);
-     object3d	= new THREE.DirectionalLight('white', 0.5*2);
-    object3d.position.set(3, -5, 3);
-    object3d.name	= 'Fill light';
-    scene.add(object3d);
+//////////////////////////////////////////////////////////////////////////////////
+//		Add lights in the scene
+//////////////////////////////////////////////////////////////////////////////////
 
-    //////////////////////////////////////////////////////////////////////////////////
-    //		CONTROLS
-    //////////////////////////////////////////////////////////////////////////////////
+
+//Left
+    lightLeft = new THREE.SpotLight( 0xffffff, 1 );
+    lightLeft.name	= 'Left light';
+    lightLeft.intensity = 0.2;
+    lightLeft.position.set(-45, 25, 25);
+    lightLeft.visible = false;
+    scene.add(lightLeft);
+
+//Right
+    lightRight	= new THREE.SpotLight( 0xffffff, 1 );
+    lightRight.name	= 'Right light';
+    lightRight.intensity = 0.2;
+    lightRight.position.set(45, 25, 25);
+    lightRight.visible = false;
+    scene.add(lightRight);
+
+
+    lightHelper = new THREE.SpotLightHelper( lightRight );
+    // scene.add( lightHelper );
+
+//********** OR **********//
+
+//Hemisphere Light
+    hemiLight = new THREE.HemisphereLight( 0xffffff, 0xffffff, 0.6 );
+    hemiLight.groundColor.setHSL( 0.095, 1, 0.8);//255.222.179
+    hemiLight.intensity = 0.5;
+    hemiLight.position.set( 0, 50, 0 );
+    scene.add( hemiLight );
+//Directional Light
+    dirLight = new THREE.DirectionalLight( 0xffffff, 1 );
+    dirLight.color.setHSL( 0.1, 1, 0.95 );
+    dirLight.position.set( -1, 1.75, 1 );
+    dirLight.position.multiplyScalar( 50 );
+    dirLight.intensity = 0.52;
+    scene.add( dirLight );
+
+
+//////////////////////////////////////////////////////////////////////////////////
+//		CONTROLS
+//////////////////////////////////////////////////////////////////////////////////
        var controls = new THREE.OrbitControls(camera, renderer.domElement);
        controls.target.set( 0, 0, 0 );
        controls.update();
@@ -94,9 +120,6 @@ function renderAR() {
         camera.aspect	= window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix()
     }, false);
-
-
-
 
     // set the scene as visible
     scene.visible = false;
@@ -165,7 +188,9 @@ function doAugmentedReality(){
  * Default rendering 3d object
  */
 function renderD() {
-    animate()
+    lightHelper.update();
+    // camera.lookAt(OBJ);
+    animate();
 }
 
 function animate() {
