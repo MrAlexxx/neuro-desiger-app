@@ -2,69 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b33685d-64ff-477f-bbaa-d7525b7e2add" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/contact-sharing-in-ar1/avatars/avatar-0.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/contact-sharing-in-ar1/avatars/avatar-236.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/contact-sharing-in-ar1/avatars/avatar-265.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/contact-sharing-in-ar1/js/badgeInfos.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/contact-sharing-in-ar1/js/ui.badgesprite.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/contact-sharing-in-ar1/role-icons/designer.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/contact-sharing-in-ar1/role-icons/developer.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/contact-sharing-in-ar1/role-icons/industry.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/contact-sharing-in-ar1/role-icons/other.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/gentilis_regular.typeface.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/material_library.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/three.model.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/Deer.obj" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/Texture/01.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/Texture/02.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/Texture/WK_Matrix_Pinie_Dunkel_Bump_01.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/Texture/WK_Matrix_Pinie_Dunkel_Diffus_01.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/Texture/WK_Wood_Teak_05_glos.jpg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/Texture/cgsmap_fabric_velour_black_d.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/Texture/cgsmap_fabric_velour_grey_d.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/sofa1.obj" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/sofa1/St_vol.01_44_sofa.max" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/sofa1/l55040-sofa-malagasy-58678.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/sofa2.obj" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/sofa2/639162.57e3e27fedf0a.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/sofa2/modern_sofa.max" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/sofa3.obj" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/sofa3/l47180-sofa-6682.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/sofa3/sofa01.max" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/sofa4.obj" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/sofa4/Sofa.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/sofa4/Sofa.max" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/sofa5.obj" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/sofa5/ROUND SOFA 1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/sofa5/ROUND SOFA 2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/sofa5/ROUND SOFA 3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/sofa5/ROUND SOFA.mat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/texture/leather_diffuse.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/texture/leather_diffuse3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/texture/leather_reflection.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/texture/leather_reflection1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/texture/test.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/texture/velour_diffuse.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/models/texture/velour_reflection.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/threex.imagegrabbing.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/threex.jsarucomarker.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/threex.videograbbing.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/threex.webcamgrabbing.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/js-aruco/LICENSE.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/js-aruco/aruco.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/js-aruco/cv.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/js-aruco/posit1-patched.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/js-aruco/posit1.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/js-aruco/posit2.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/js-aruco/svd.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/three.js/build/three.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/three.js/lib/MTLLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/three.js/lib/OBJLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/three.js/lib/OrbitControls.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/three.js/lib/stats.min.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="neuro-desiger-app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -118,7 +56,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
@@ -128,7 +66,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".editorconfig" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".editorconfig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.editorconfig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
@@ -311,12 +249,12 @@
       <workItem from="1482241425794" duration="5307000" />
       <workItem from="1482311059501" duration="14366000" />
       <workItem from="1482395347461" duration="1949000" />
-      <workItem from="1482397809426" duration="400000" />
+      <workItem from="1482397809426" duration="703000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86486000" />
+    <option name="totallyTimeSpent" value="86789000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -328,7 +266,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14179105" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -506,18 +444,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.editorconfig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>
