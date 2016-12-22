@@ -3,6 +3,8 @@
  *
  * todo - implement loading obj files from "OBJImg" (https://github.com/JordanDelcros/OBJImg)
  * todo - add possibility to compressing Javascript file for more security and decreasing file size as it possible (https://github.com/mrdoob/three.js/wiki/Build-instructions)
+ *
+ * todo - implement tessellation [ficha: when user change the good, it destroying by using  tessellation] (https://threejs.org/examples/#webgl_modifier_tessellation)
  */
 
 //////////////////////////////////////////////////////////////////////////////////
@@ -21,6 +23,7 @@ loader.load( '../models/sofa1.obj', function ( object ) {//sofa1.obj, round_sofa
     object.scale.multiplyScalar( 0.002 );
     object.position.set(0,0,0);
     // object.rotation.z = .5*Math.PI;
+    // object.rotation.x = -.5*Math.PI;
 
 
     // object.material = new THREE.MeshPhongMaterial( { color: 0x4b4e4c, specular: 0xffffff, shading: 100 } );
@@ -94,15 +97,26 @@ function creatingMaterial() {
 
 
 
-    return new THREE.MeshPhongMaterial({
-        color: 0xaaaaaa,
-        shininess: 1.5,
-        map: textureDif, /* bumpMap: texture, bumpScale: 0.15, */
-        // lightMap:textureRef,
-        combine: THREE.MixOperation,
-        reflectivity: 0.71
-    }); // leather
-    // return new THREE.MeshBasicMaterial( { map: texture } ); // textile
+   return new THREE.MeshPhongMaterial( {
+        specular: 0x333333,
+        shininess: 2.5,
+        emissive: 2.5,
+       // morphTargets: true,
+       // morphNormals: true,
+       // vertexColors: THREE.FaceColors,
+       // shading: THREE.SmoothShading
+    } ); // leather
+
+    // return new THREE.MeshPhongMaterial({
+    //     color: 0xaaaaaa,
+    //     shininess: 1.5,
+    //     map: textureDif, /* bumpMap: texture, bumpScale: 0.15, */
+    //     // lightMap:textureRef,
+    //     combine: THREE.MixOperation,
+    //     reflectivity: 0.71,
+    //     shading: THREE.FlatShading
+    // }); // leather
+    // return new THREE.MeshPhongMaterial( { color: 0xccddff, envMap: textureDif, refractionRatio: 0.98, reflectivity: 0.9 } );// textile
 
 }
 

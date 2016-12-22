@@ -1,30 +1,25 @@
 <!DOCTYPE html>
-<!-- include three.js -->
-<script src='https://cdn.jsdelivr.net/jquery/3.1.1/jquery.min.js'></script>
-<script src='vendor/three.js/build/three.js'></script>
+<html>
+  <head>
+    <title>Angular QuickStart</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
 
-<!-- include js-aruco -->
-<script src='vendor/js-aruco/svd.js'></script>
-<script src='vendor/js-aruco/posit1-patched.js'></script>
-<script src='vendor/js-aruco/cv.js'></script>
-<script src='vendor/js-aruco/aruco.js'></script>
+    <!-- Polyfill(s) for older browsers -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
 
-<!-- include some extensions for three.js -->
-<script type="text/javascript" src="vendor/three.js/lib/OBJLoader.js"></script>
-<script type="text/javascript" src="vendor/three.js/lib/MTLLoader.js"></script>
-<script type="text/javascript" src="vendor/three.js/lib/OrbitControls.js"></script>
-<!-- include some extensions -->
-<script src='threex.webcamgrabbing.js'></script>
-<script src='threex.imagegrabbing.js'></script>
-<script src='threex.videograbbing.js'></script>
-<script src='threex.jsarucomarker.js'></script>
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
 
-<!-- Fonts -->
-<!--<script src="fonts/gentilis_regular.typeface.js"></script>-->
+    <script src="systemjs.config.js"></script>
+    <script>
+      System.import('app').catch(function(err){ console.error(err); });
+    </script>
+  </head>
 
-<body style='margin: 0px; padding: 0; overflow: hidden; text-align:center;'>
-
-    <script src="js/main.js"></script>
-    <script src="js/material_library.js"></script>
-    <script src="js/three.model.js"></script>
-</body>
+  <body>
+    <my-app>Loading AppComponent content here ...</my-app>
+  </body>
+</html>
