@@ -1,0 +1,14 @@
+.navbar{
+    margin-bottom: 0;
+}
+
+.wrapper{
+    background: url(../img/bg1.png) no-repeat scroll center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    text-align: center;
+    color: #fff;
+    height: 100vh;
+}
