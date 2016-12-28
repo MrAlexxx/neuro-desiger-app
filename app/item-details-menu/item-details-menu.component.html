@@ -1,0 +1,8 @@
+<div [ngClass]="{'menu-circle': true, 'absolute-center': true, 'open':isOpenMenu}">
+    <button [ngClass]="'item-menu absolute-center on-off'" (click)="toggleMenu()"><span [ngClass]="{'glyphicon': true, 'glyphicon-th': !isOpenMenu, 'glyphicon-remove': isOpenMenu}" [@animationMenuButton]="isOpenMenu"></span></button><!--glyphicon-remove-->
+    <button [ngClass]="'item-menu absolute-center color'"><span [ngClass]="'glyphicon glyphicon-tint'"></span></button>
+    <button [ngClass]="'item-menu absolute-center resize'"><span [ngClass]="'glyphicon glyphicon-fullscreen'"></span></button>
+    <button [ngClass]="'item-menu absolute-center info'"><span [ngClass]="'glyphicon glyphicon-info-sign'"></span></button>
+    <button [ngClass]="'item-menu absolute-center print'"><span [ngClass]="'glyphicon glyphicon-print'"></span></button>
+    <button [ngClass]="'item-menu absolute-center cart'"><span [ngClass]="'glyphicon glyphicon-shopping-cart'"></span></button>
+</div>

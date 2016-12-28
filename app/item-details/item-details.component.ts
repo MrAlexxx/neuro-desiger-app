@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, trigger, state, style, transition, animate, keyframes } from '@angular/core';
 
 @Component({
     moduleId: module.id,
@@ -8,8 +8,15 @@ import { Component } from '@angular/core';
 
 })
 
-export class ItemDetailComponent  {
-    name = 'Angular';
+export class ItemDetailsComponent  {
+    name: string;
+
+    constructor(){
+        this.name = 'Angular';
+
+    }
+
+
 }
 
 

@@ -7,14 +7,37 @@
 }
 
 .item{
-    /*background: url(../../img/items/sofa7.png) no-repeat scroll center center;*/
-    /*-webkit-background-size: contain;*/
-    /*-moz-background-size: contain;*/
-    /*background-size: contain;*/
-    /*-o-background-size: contain;*/
-    width:100%;
-    text-align: center;
-    color: #fff;
+    width: 100%;
     height: 100%;
-    border: 1px solid white;
+    border: 1px solid rgba(255, 255, 255, 0.42);
 }
+
+
+.circle-control{
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.78);
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+}
+
+.circle-control:hover{
+    -webkit-box-shadow: 0 0 22px 2px rgba(240,240,240,0.89);
+    -moz-box-shadow: 0 0 22px 2px rgba(240,240,240,0.89);
+    box-shadow: 0 0 22px 2px rgba(240,240,240,0.89);
+    background-color: white;
+}
+
+.circle-control.left  { left:   -7px; }
+.circle-control.top   { top:    -7px; }
+.circle-control.right { right:  -7px; }
+.circle-control.bottom{ bottom: -7px; }
+.circle-control.center{
+    margin: auto;
+    left: 0;
+    right: 0;
+    cursor: n-resize;
+}
+
+.circle-control.left.top, .circle-control.right.bottom{ cursor: nw-resize;}
+.circle-control.left.bottom, .circle-control.right.top{ cursor: ne-resize;}

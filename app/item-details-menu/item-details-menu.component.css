@@ -1,0 +1,77 @@
+.menu-circle{
+    width: 300px;
+    height: 300px;
+    /*background-color: rgba(255, 255, 255, 0.57);*/
+    border-radius: 50%;
+    position: absolute;
+    top: -25vh;
+    /*display: none;*/
+}
+
+.menu-circle.open{
+    border-right: 1px solid white;
+    border-left: none;
+    box-shadow: inset -14px 0 14px -7px rgba(255, 255, 255, 0.75);
+}
+
+.menu-circle>.item-menu:not(.on-off){
+    display: none;
+}
+ /* @todo: перенести в анімацію*/
+.menu-circle.open>.item-menu:not(.on-off){
+    display: block;
+}
+/*item menu*/
+.item-menu{
+    width: 45px;
+    height: 45px;
+    /*color: #737373;*/
+    color: #050505;
+    border-radius: 50%;
+    position: absolute;
+    margin: auto;
+    background: #fff ;
+    cursor: pointer;
+    display: flex;
+    border: none;
+    outline: none;
+}
+
+.on-off{
+    color: #ffbc5e;
+}
+
+.color{
+    transform: rotate(-90deg) translate(150px) rotate(90deg);
+}
+.resize{
+    transform: rotate(-45deg) translate(150px) rotate(45deg);
+}
+.info{
+    transform: rotate(0deg) translate(150px) rotate(0deg);
+}
+.print{
+    transform: rotate(45deg) translate(150px) rotate(-45deg);
+}
+.cart{
+    transform: rotate(90deg) translate(150px) rotate(-90deg);
+}
+
+.item-menu>span{
+    margin: auto;
+
+    padding-bottom: 2px;
+    padding-left: 2px;
+    font-size: 18px;
+}
+
+.item-menu:hover:not(.on-off){
+
+    color: #fff;
+    background: #050505;
+}
+.on-off:hover{
+    -webkit-box-shadow: 4px 3px 15px 0 rgba(0,0,0,0.43);
+    -moz-box-shadow: 4px 3px 15px 0 rgba(0,0,0,0.43);
+    box-shadow: 4px 3px 15px 0 rgba(0,0,0,0.43);
+}
