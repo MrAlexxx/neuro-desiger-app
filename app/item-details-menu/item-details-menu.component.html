@@ -1,8 +1,11 @@
-<div [ngClass]="{'menu-circle': true, 'absolute-center': true, 'open':isOpenMenu}">
+<div [ngClass]="menuCircleClasses">
     <button [ngClass]="'item-menu absolute-center on-off'" (click)="toggleMenu()"><span [ngClass]="{'glyphicon': true, 'glyphicon-th': !isOpenMenu, 'glyphicon-remove': isOpenMenu}" [@animationMenuButton]="isOpenMenu"></span></button><!--glyphicon-remove-->
-    <button [ngClass]="'item-menu absolute-center color'"><span [ngClass]="'glyphicon glyphicon-tint'"></span></button>
-    <button [ngClass]="'item-menu absolute-center resize'"><span [ngClass]="'glyphicon glyphicon-fullscreen'"></span></button>
-    <button [ngClass]="'item-menu absolute-center info'"><span [ngClass]="'glyphicon glyphicon-info-sign'"></span></button>
-    <button [ngClass]="'item-menu absolute-center print'"><span [ngClass]="'glyphicon glyphicon-print'"></span></button>
-    <button [ngClass]="'item-menu absolute-center cart'"><span [ngClass]="'glyphicon glyphicon-shopping-cart'"></span></button>
+
+    <!--<button  *ngFor="let button of menuButtons" [@button.id]="isOpenMenu" [ngClass]="['item-menu', 'absolute-center', button.btnClass ]"><span [ngClass]="['glyphicon', button.glypClass  ]"></span></button>-->
+
+    <button [@color]="isOpenMenu" (@color.done)="animationDone($event)" [ngClass]="'item-menu absolute-center color'"><span [ngClass]="'glyphicon glyphicon-tint'"></span></button>
+    <button [@resize]="isOpenMenu"[ngClass]="'item-menu absolute-center resize'"><span [ngClass]="'glyphicon glyphicon-fullscreen'"></span></button>
+    <button [@info]="isOpenMenu"  [ngClass]="'item-menu absolute-center info'"><span [ngClass]="'glyphicon glyphicon-info-sign'"></span></button>
+    <button [@print]="isOpenMenu" [ngClass]="'item-menu absolute-center print'"><span [ngClass]="'glyphicon glyphicon-print'"></span></button>
+    <button [@cart]="isOpenMenu"  [ngClass]="'item-menu absolute-center cart'"><span [ngClass]="'glyphicon glyphicon-shopping-cart'"></span></button>
 </div>

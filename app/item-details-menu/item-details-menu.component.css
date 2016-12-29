@@ -4,22 +4,28 @@
     /*background-color: rgba(255, 255, 255, 0.57);*/
     border-radius: 50%;
     position: absolute;
-    top: -25vh;
+    top: -58%;
     /*display: none;*/
 }
 
 .menu-circle.open{
     border-right: 1px solid white;
+    z-index: 10;
     border-left: none;
     box-shadow: inset -14px 0 14px -7px rgba(255, 255, 255, 0.75);
 }
 
-.menu-circle>.item-menu:not(.on-off){
-    display: none;
+.menu-circle .item-menu:not(.on-off){
+    opacity: 0;
+    /*z-index:-1;*/
+    /*-webkit-transition: all 0.5s ease-in-out;*/
+    /*-moz-transition: all 0.5s ease-in-out;*/
+    /*-o-transition: all 0.5s ease-in-out;*/
+    /*transition: all 0.5s ease-in-out;*/
 }
  /* @todo: перенести в анімацію*/
-.menu-circle.open>.item-menu:not(.on-off){
-    display: block;
+.menu-circle.open .item-menu:not(.on-off){
+    opacity: 1;
 }
 /*item menu*/
 .item-menu{
@@ -35,6 +41,8 @@
     display: flex;
     border: none;
     outline: none;
+
+
 }
 
 .on-off{
@@ -42,31 +50,32 @@
 }
 
 .color{
+    transform: translate(0);
+}
+.menu-circle .color{
     transform: rotate(-90deg) translate(150px) rotate(90deg);
 }
-.resize{
+.menu-circle .resize{
     transform: rotate(-45deg) translate(150px) rotate(45deg);
 }
-.info{
+.menu-circle .info{
     transform: rotate(0deg) translate(150px) rotate(0deg);
 }
-.print{
+.menu-circle .print{
     transform: rotate(45deg) translate(150px) rotate(-45deg);
 }
-.cart{
+.menu-circle .cart{
     transform: rotate(90deg) translate(150px) rotate(-90deg);
 }
 
-.item-menu>span{
+.item-menu span{
     margin: auto;
-
     padding-bottom: 2px;
     padding-left: 2px;
     font-size: 18px;
 }
 
 .item-menu:hover:not(.on-off){
-
     color: #fff;
     background: #050505;
 }
