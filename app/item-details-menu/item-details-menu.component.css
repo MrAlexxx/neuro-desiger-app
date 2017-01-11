@@ -5,7 +5,6 @@
     border-radius: 50%;
     position: absolute;
     top: -58%;
-    /*display: none;*/
 }
 
 .menu-circle.open{
@@ -17,21 +16,17 @@
 
 .menu-circle .item-menu:not(.on-off){
     opacity: 0;
-    /*z-index:-1;*/
-    /*-webkit-transition: all 0.5s ease-in-out;*/
-    /*-moz-transition: all 0.5s ease-in-out;*/
-    /*-o-transition: all 0.5s ease-in-out;*/
-    /*transition: all 0.5s ease-in-out;*/
 }
+
  /* @todo: перенести в анімацію*/
 .menu-circle.open .item-menu:not(.on-off){
     opacity: 1;
 }
+
 /*item menu*/
 .item-menu{
     width: 45px;
     height: 45px;
-    /*color: #737373;*/
     color: #050505;
     border-radius: 50%;
     position: absolute;
@@ -41,8 +36,6 @@
     display: flex;
     border: none;
     outline: none;
-
-
 }
 
 .on-off{

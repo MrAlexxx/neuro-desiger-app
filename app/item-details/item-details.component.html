@@ -1,13 +1,13 @@
-
-<h1>Hello {{name}}</h1>
-<div class="item-block">
+<items-menu></items-menu>
+<div #itemBox class="item-block" (dragstart)="onDragStart($event, itemBox)" (drag)="onDrag($event, itemBox)" (mouseup)="onDrop($event)" >
     <item-details-menu></item-details-menu>
 
     <div class="circle-control left top"></div>
     <div class="circle-control left bottom"></div>
-    <div class="circle-control top center"></div>
+    <div class="circle-control top  center"></div>
     <div class="circle-control right top"></div>
     <div class="circle-control right bottom"></div>
     <div class="circle-control bottom center"></div>
-    <img class="item" src="../../img/items/sofa7.png" alt="">
+
+    <img  class="item" src="../../img/items/{{img.src}}" alt="" >
 </div>

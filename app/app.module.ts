@@ -6,6 +6,7 @@ import { ItemDetailsComponent } from "./item-details/item-details.component";
 import { HttpModule } from "@angular/http";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { ItemDetailsMenuComponent } from "./item-details-menu/item-details-menu.component";
+import { ItemsMenuComponent } from "./items-menu/items-menu.component";
 
 @NgModule({
   imports:      [
@@ -17,7 +18,8 @@ import { ItemDetailsMenuComponent } from "./item-details-menu/item-details-menu.
   declarations: [
       AppComponent,
       ItemDetailsComponent,
-      ItemDetailsMenuComponent
+      ItemDetailsMenuComponent,
+      ItemsMenuComponent
   ],
   providers:        [
     //MyService, MyOtherService

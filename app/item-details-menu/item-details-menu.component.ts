@@ -2,23 +2,6 @@ import { Component, trigger, state, style, transition, animate, keyframes } from
 
 import {default as menuAnimations} from '../menu-animatios';
 
-const MENUBUTTONS = [
-    {
-        "id":-2,"btnClass":"color", "glypClass":"glyphicon-tint"
-    },
-    {
-        "id":-1,"btnClass":"resize", "glypClass":"glyphicon-fullscreen"
-    },
-    {
-        "id":0,"btnClass":"info", "glypClass":"glyphicon-info-sign"
-    },
-    {
-        "id":1,"btnClass":"print", "glypClass":"glyphicon-print"
-    },
-    {
-        "id":2,"btnClass":"cart", "glypClass":"glyphicon-shopping-cart"
-    }
-];
 
 @Component({
     moduleId: module.id,
@@ -56,20 +39,18 @@ const MENUBUTTONS = [
 export class ItemDetailsMenuComponent{
     name: string;
     isOpenMenu: boolean;
-    menuButtons: any;
     menuCircleClasses: any;
 
     constructor(){
         this.name = 'item-menu';
         this.isOpenMenu = false;
-        this.menuButtons = MENUBUTTONS;
     }
 
     toggleMenu(){
         this.isOpenMenu = !this.isOpenMenu;
     }
 
-    animationDone(e){
+    animationDone(){
         this.menuCircleClasses = {'menu-circle': true, 'absolute-center': true, 'open':this.isOpenMenu};
     }
 

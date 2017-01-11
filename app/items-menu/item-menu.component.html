@@ -1,0 +1,30 @@
+<div [ngClass]="menuClasses" *ngIf="items.length>0" [@animationMenu]="isOpenMenu" (@animationMenu.done)="animationDone()" (@animationMenu.start)="animationStart()">
+    <div class="header">
+        <div class="fl svg-container ">
+            <svg (click)="toggleMenu()" class="icon_menu" width="15" height="15"><use xlink:href="../../img/svgdefs.svg#icon_menu"></use></svg>
+        </div>
+        <h1>NeuroDesigner</h1>
+        <div class="fr svg-container">
+            <svg class="icon_search" width="20" height="20"><use xlink:href="../../img/svgdefs.svg#icon_search"></use></svg>
+        </div>
+        <span>Chose room type</span>
+    </div>
+
+    <ul #menuItems class="menu-items" [style.overflow]="menuOverflow">
+        <li class="item" *ngFor="let item of items" [@animationMenuItem]="isOpenMenu">
+            <a href="#">
+                <div class="svg-container">
+                    <svg [ngClass]="item.icon" width="50" height="50"><use attr.xlink:href="../../img/svgdefs.svg#{{item.icon}}"></use></svg>
+                </div>
+                <p>{{item.name}}</p>
+                <span class="small">{{item.qty}} items</span>
+            </a>
+        </li>
+    </ul>
+
+    <div class="footer">
+        <svg class="icon_four-squares" width="10" height="10"><use xlink:href="../../img/svgdefs.svg#icon_four-squares"></use></svg>
+        <a href="#">view all types</a>
+    </div>
+</div>
+

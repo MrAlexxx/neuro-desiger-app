@@ -1,9 +1,10 @@
 .item-block{
     width: 52vw;
     height: 42vh;
-    bottom: 7%;
-    right: 18%;
+    top: 52%;
+    left: 34%;
     position: absolute;
+    transition: transform 50ms ease-in-out;
 }
 
 .item{

@@ -1,7 +1,16 @@
+@font-face {
+    font-family: DIN;
+    src: url(fonts/DIN.ttf);
+}
+
+
 body{
     margin: 0;
     padding: 0;
     overflow: hidden;
+    font-family: DIN,'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.7em;
 }
 
 .absolute-center{
@@ -10,4 +19,11 @@ body{
    right: 0;
     top: 0;
     bottom: 0;
+}
+
+a:hover{
+    text-decoration: none;
+}
+.path{
+    fill: #ffffff;
 }
