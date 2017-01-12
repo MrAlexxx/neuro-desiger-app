@@ -1,4 +1,7 @@
-<items-menu></items-menu>
+<div class="menu-wrapper">
+    <items-menu></items-menu>
+    <user-menu (onAnimate)="onAnimate($event)"></user-menu>
+</div>
 <div #itemBox class="item-block" (dragstart)="onDragStart($event, itemBox)" (drag)="onDrag($event, itemBox)" (mouseup)="onDrop($event)" >
     <item-details-menu></item-details-menu>
 

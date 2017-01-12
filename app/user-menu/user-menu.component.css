@@ -1,0 +1,63 @@
+.menu.minimize{
+    padding: 1vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.user-name{
+    width: 60%;
+    font-size: 10px;
+    text-align: left;
+    padding: 5px;
+    font-weight: 200;
+    color: #9c9c9c;
+    line-height: 14px;
+}
+
+.user-name h1{
+    display: block;
+    font-size: 13px;
+    margin: 0;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.circle-block{
+    width: 20%;
+    position: relative;
+}
+
+.user-img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.49);
+    background: url(../../img/users/clarkson.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.cart{
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.21);
+    border-radius: 50%;
+    display: flex;
+}
+
+.cart svg{
+    margin: auto;
+}
+
+.counter{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #ff2074;
+    color: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 11px;
+    line-height: normal;
+}

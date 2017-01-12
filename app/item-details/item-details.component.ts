@@ -1,8 +1,5 @@
 import { Component, OnInit, ViewChild, Renderer, ElementRef, trigger, state, style, transition, animate, keyframes} from '@angular/core';
 
-import { window } from "rxjs/operator/window";
-import { start } from "repl";
-
 @Component({
     moduleId: module.id,
     selector: 'item-details',
@@ -44,7 +41,7 @@ export class ItemDetailsComponent implements OnInit{
             '_startX': e.clientX,
             '_startY': e.clientY,
             '_offsetX': Math.round(elemPosition.left),
-            '_offsetY': Math.round(elemPosition.top),
+            '_offsetY': Math.round(elemPosition.top)
         };
 
     }
@@ -65,6 +62,10 @@ export class ItemDetailsComponent implements OnInit{
 
     onDrop(e: MouseEvent) {
         this.draggable = false;
+    }
+
+    onAnimate(arg: boolean){
+        console.log('adas');
     }
 
 }

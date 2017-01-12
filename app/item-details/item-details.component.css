@@ -13,6 +13,14 @@
     border: 1px solid rgba(255, 255, 255, 0.42);
 }
 
+.menu-wrapper{
+    position: absolute;
+    width: 18vw;
+    min-width: 200px;
+
+    top: 100px;
+    left: 2vw;
+}
 
 .circle-control{
     position: absolute;

@@ -1,4 +1,4 @@
-import { Component, OnInit, trigger, transition, animate, style, keyframes, state } from "@angular/core";
+import { Component, OnInit, trigger, transition, animate, style, keyframes, Output, EventEmitter } from "@angular/core";
 
 const ITEMS = [
     {
@@ -44,16 +44,15 @@ const ITEMS = [
 @Component({
     moduleId: module.id,
     selector: 'items-menu',
-    templateUrl: 'item-menu.component.html',
-    styleUrls: ['item-menu.component.css'],
+    templateUrl: 'items-menu.component.html',
+    styleUrls: ['items-menu.component.css'],
     animations: [
         trigger('animationMenu',[
-
             transition('0 => 1', [
                 animate(600, keyframes([
-                    style({height: '*', transform: 'translateY(0px)', offset:0}),
-                    style({height: '60vh', transform: 'translateY(15px)', offset:.75}),
-                    style({height: '60vh', transform: 'translateY(20px)', offset:1}),
+                    style({height: '*', transform: 'translateY(-20px)', offset:0}),
+                    style({height: '60vh', transform: 'translateY(-10px)', offset:.50}),
+                    style({height: '60vh', transform: 'translateY(0px)', offset:1}),
                 ]))
             ]),
             transition('1 => 0', [   //transition('void => *', [
@@ -64,31 +63,49 @@ const ITEMS = [
                 ]))
             ])
         ]),
-        trigger('animationMenuItem',[
 
+        trigger('animationMenuItem',[
             transition('0 => 1', [
                 animate(600, keyframes([
-                    style({opacity: 0, transform: 'translateY(0px)', offset:0}),
-                    style({opacity: 1, transform: 'translateY(15px)', offset:.25}),
-                    style({opacity: 1, transform: 'translateY(20px)', offset:1}),
+                    style({height: '0', offset:0}),
+                    style({height: '30%', offset:.50}),
+                    style({height: '72%', offset:1}),
                 ]))
             ]),
             transition('1 => 0', [   //transition('void => *', [
                 animate(600, keyframes([
-                    style({opacity: 1, offset:0}),
-                    style({opacity: 0, transform: 'translateY(-15px)', offset:.25}),
-                    style({opacity: 0, transform: 'translateY(-20px)', offset:1}),
+                    style({height: '*',  offset:0}),
+                    style({height: '0%',  offset:.75}),
+                    style({height: '0%',  offset:1}),
                 ]))
             ])
-        ])
+        ]),
+
+        trigger('hideShow',[
+            transition('0 => 1', [
+                animate(600, keyframes([
+                    style({opacity: '0', offset:0}),
+                    style({opacity: '1', offset:1}),
+                ]))
+            ]),
+            transition('1 => 0', [
+                animate(600, keyframes([
+                    style({opacity: '1',  offset:0}),
+                    style({opacity: '0',  offset:1}),
+                ]))
+            ])
+        ]),
     ]
 })
 
 export class ItemsMenuComponent implements OnInit{
+    @Output() onAnimate = new EventEmitter<boolean>();
+
     items: Object;
     isOpenMenu: boolean;
     menuClasses: Object;
     menuOverflow: string;
+
 
     constructor(){ }
 
@@ -102,15 +119,21 @@ export class ItemsMenuComponent implements OnInit{
     toggleMenu(){
         this.isOpenMenu = !this.isOpenMenu;
         this.menuOverflow = (this.menuOverflow === 'auto') ? "hidden" : "auto" ;
-        console.log(this.isOpenMenu);
+
+        this.sendData(this.isOpenMenu);
     }
 
     animationDone(){
         this.menuClasses = {'menu': true, 'minimize':  !this.isOpenMenu};
     }
 
-    animationStart(){
+    animationItemStart(){
+        this.menuOverflow = "hidden";
+        this.menuClasses = {'menu': true, 'minimize':  false};
+    }
 
-        console.log('121');
+    sendData(arg: boolean){
+        console.log(arg);
+        this.onAnimate.emit(arg);
     }
 }
