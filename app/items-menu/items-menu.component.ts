@@ -50,16 +50,16 @@ const ITEMS = [
         trigger('animationMenu',[
             transition('0 => 1', [
                 animate(600, keyframes([
-                    style({height: '*', transform: 'translateY(-20px)', offset:0}),
-                    style({height: '60vh', transform: 'translateY(-10px)', offset:.50}),
-                    style({height: '60vh', transform: 'translateY(0px)', offset:1}),
+                    style({height: '*',    offset:0}),
+                    style({height: '60vh', offset:.50}),
+                    style({height: '60vh', offset:1}),
                 ]))
             ]),
             transition('1 => 0', [   //transition('void => *', [
                 animate(600, keyframes([
                     style({height: '*',   offset:0}),
-                    style({height: '7vh', transform: 'translateY(-15px)', offset:.75}),
-                    style({height: '7vh', transform: 'translateY(-20px)', offset:1}),
+                    style({height: '7vh', offset:.75}),
+                    style({height: '7vh', offset:1}),
                 ]))
             ])
         ]),
@@ -67,14 +67,14 @@ const ITEMS = [
         trigger('animationMenuItem',[
             transition('0 => 1', [
                 animate(600, keyframes([
-                    style({height: '0', offset:0}),
+                    style({height: '0',   offset:0}),
                     style({height: '30%', offset:.50}),
                     style({height: '72%', offset:1}),
                 ]))
             ]),
             transition('1 => 0', [   //transition('void => *', [
                 animate(600, keyframes([
-                    style({height: '*',  offset:0}),
+                    style({height: '*',   offset:0}),
                     style({height: '0%',  offset:.75}),
                     style({height: '0%',  offset:1}),
                 ]))
@@ -133,7 +133,6 @@ export class ItemsMenuComponent implements OnInit{
     }
 
     sendData(arg: boolean){
-        console.log(arg);
         this.onAnimate.emit(arg);
     }
 }

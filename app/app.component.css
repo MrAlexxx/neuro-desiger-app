@@ -3,7 +3,7 @@
 }
 
 .wrapper{
-    background: url(../img/bg1.png) no-repeat scroll center center;
+    background: url(../img/bg1.png) no-repeat scroll center bottom;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;

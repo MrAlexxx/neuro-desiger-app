@@ -1,30 +1,63 @@
 import { Component, OnInit, ViewChild, Renderer, ElementRef, trigger, state, style, transition, animate, keyframes} from '@angular/core';
+import { ItemsService } from "../items.service";//????
+// import { AngularFire, FirebaseListObservable } from "angularfire2";
+
+
 
 @Component({
     moduleId: module.id,
     selector: 'item-details',
     templateUrl: 'item-details.component.html',
-    styleUrls: ['item-details.component.css']
+    styleUrls: ['item-details.component.css'],
+    providers: [ItemsService],
+    animations:[
+        trigger('menuMovement',[
+            transition('0 => 1', [
+                animate(600, keyframes([
+                    style({transform: 'translateY(0px)', offset:0}),
+                    style({transform: 'translateY(10px)', offset:.50}),
+                    style({transform: 'translateY(20px)', offset:1}),
+                ]))
+            ]),
+            transition('1 => 0', [   //transition('void => *', [
+                animate(600, keyframes([
+                    style({offset:0}),
+                    style({transform: 'translateY(-15px)', offset:.75}),
+                    style({transform: 'translateY(-20px)', offset:1}),
+                ]))
+            ])
+        ])
+    ]
 
 })
 
 export class ItemDetailsComponent implements OnInit{
     // @ViewChild('itemBox') private itemBox: ElementRef;
     // @ContentChildren('list-item') items: QueryList<ElementRef>; // if we need the list of elements
-    name: string;
+
     img: any;
+    isOpenMenu: boolean;
+    isMinimized: boolean;
     dragPosition: any;
     draggable: boolean;
 
-    constructor(public renderer: Renderer, private _elementRef: ElementRef ){  }
+    // items: FirebaseListObservable<any[]>;
+    //
+    // constructor(public item: ItemsService, private af: AngularFire){
+    //     this.items = af.database.list('/items');
+    // }
+
+
 
     ngOnInit(){
-        this.name = 'Angular';
         this.draggable = false;
+        this.isOpenMenu = true;
+        this.isMinimized = true;
 
         this.img = {
             'src': 'sofa7.png'
         }
+        console.log(this.items);
     }
 
     // If you want to be notified of changes in a query list
@@ -65,7 +98,12 @@ export class ItemDetailsComponent implements OnInit{
     }
 
     onAnimate(arg: boolean){
-        console.log('adas');
+        this.isOpenMenu = arg;
+        console.log(arg);
+    }
+
+    toogleClass(){
+        this.isMinimized = !this.isMinimized;
     }
 
 }

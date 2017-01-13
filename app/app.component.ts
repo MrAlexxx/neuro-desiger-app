@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent  {
-  name = 'NeuroDesigner';
-
-
+  name = 'Neuro Designer';
 }
+
+//@todo: Angular CLI - console create the new angular 2 files

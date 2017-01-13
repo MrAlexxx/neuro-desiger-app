@@ -1,6 +1,6 @@
-<div class="menu-wrapper">
-    <items-menu></items-menu>
-    <user-menu (onAnimate)="onAnimate($event)"></user-menu>
+<div class="menu-wrapper" [@menuMovement]="isOpenMenu" (@menuMovement.done)="toogleClass()" [class.minimized]="isMinimized" >
+    <items-menu (onAnimate)="onAnimate($event)"></items-menu>
+    <user-menu></user-menu>
 </div>
 <div #itemBox class="item-block" (dragstart)="onDragStart($event, itemBox)" (drag)="onDrag($event, itemBox)" (mouseup)="onDrop($event)" >
     <item-details-menu></item-details-menu>
@@ -13,4 +13,11 @@
     <div class="circle-control bottom center"></div>
 
     <img  class="item" src="../../img/items/{{img.src}}" alt="" >
+</div>
+<div class="bottom-menu">
+    <!--<a href="#" class="bottom-item title">NeuroDesigner</a>-->
+
+    <div class="bottom-item prev"><span class="glyphicon glyphicon-menu-left"></span></div>
+    <div class="bottom-item description">Crislyn Sofa</div>
+    <div class="bottom-item next"><span class="glyphicon glyphicon-menu-right"></span></div>
 </div>

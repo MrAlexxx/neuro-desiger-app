@@ -1,3 +1,16 @@
+.menu-wrapper{
+    position: absolute;
+    width: 18vw;
+    min-width: 200px;
+
+    top: 100px;
+    left: 2vw;
+}
+
+.menu-wrapper.minimized{
+    top: 80px;
+}
+
 .item-block{
     width: 52vw;
     height: 42vh;
@@ -11,15 +24,6 @@
     width: 100%;
     height: 100%;
     border: 1px solid rgba(255, 255, 255, 0.42);
-}
-
-.menu-wrapper{
-    position: absolute;
-    width: 18vw;
-    min-width: 200px;
-
-    top: 100px;
-    left: 2vw;
 }
 
 .circle-control{
@@ -51,3 +55,94 @@
 
 .circle-control.left.top, .circle-control.right.bottom{ cursor: nw-resize;}
 .circle-control.left.bottom, .circle-control.right.top{ cursor: ne-resize;}
+
+.bottom-menu{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 16vw;
+    height: 4.5vh;
+    min-height: 30px;
+    min-width: 160px;
+    z-index: 100;
+}
+
+.bottom-item{
+    display: inline-block;
+    width: 20%;
+    height: 100%;
+    vertical-align: middle;
+    padding: 3% 0;
+    background-color: rgba(37, 40, 53, 0.93);
+
+    /*-webkit-transition-duration: 0.3s;*/
+    /*-webkit-transition-property: transform;*/
+    /*transition-duration: 0.3s;*/
+    /*transition-property: transform;*/
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    position: relative;
+}
+
+.next{
+    border-top-right-radius: 8px;
+    cursor: pointer;
+}
+
+.prev{
+    border-top-left-radius: 8px;
+    cursor: pointer;
+}
+
+/*.next:hover, .prev:hover{*/
+    /*background-color: #213c4e;*/
+/*}*/
+
+.bottom-item:not(.description):before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    background: #ffffff;
+    height: 2px;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.bottom-item.next:before {
+    left: 0;
+    right: 100%;
+    -webkit-transition-property: right;
+    transition-property: right;
+}
+.bottom-item.prev:before {
+    left: 100%;
+    right: 0;
+    -webkit-transition-property: left;
+    transition-property: left;
+}
+
+.bottom-item.next:hover:before{
+    right: 0;
+}
+.bottom-item.prev:hover:before{
+    left: 0;
+}
+
+.bottom-menu .description{
+    width: 60%;
+    border-left: 1px solid rgba(255, 255, 255, 0.22);
+    border-right: 1px solid rgba(255, 255, 255, 0.22);
+    box-shadow: inset 1px 1px 10px 0 rgba(0,0,0,0.75);
+}
+
+.title{
+
+}

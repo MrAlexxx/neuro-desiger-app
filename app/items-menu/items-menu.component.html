@@ -1,7 +1,8 @@
 <div [ngClass]="menuClasses" *ngIf="items.length>0" [@animationMenu]="isOpenMenu" (@animationMenu.done)="animationDone()">
     <div class="header">
         <div class="fl svg-container ">
-            <svg (click)="sendData(true)" class="icon_menu" width="15" height="15"><use xlink:href="../../img/svgdefs.svg#icon_menu"></use></svg>
+            <!--@todo: replace all svg in to current component directory-->
+            <svg (click)="toggleMenu()" class="icon_menu" width="15" height="15"><use xlink:href="../../img/svgdefs.svg#icon_menu"></use></svg>
         </div>
         <h1>NeuroDesigner</h1>
         <div class="fr svg-container">
