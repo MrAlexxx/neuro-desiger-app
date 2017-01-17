@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewChild, Renderer, ElementRef, trigger, state, style, transition, animate, keyframes} from '@angular/core';
-import { ItemsService } from "../items.service";//????
-// import { AngularFire, FirebaseListObservable } from "angularfire2";
+import { AngularFire, FirebaseListObservable } from "angularfire2";
 
 
 
@@ -9,7 +8,7 @@ import { ItemsService } from "../items.service";//????
     selector: 'item-details',
     templateUrl: 'item-details.component.html',
     styleUrls: ['item-details.component.css'],
-    providers: [ItemsService],
+    // providers: [ItemsService],
     animations:[
         trigger('menuMovement',[
             transition('0 => 1', [
@@ -41,11 +40,12 @@ export class ItemDetailsComponent implements OnInit{
     dragPosition: any;
     draggable: boolean;
 
-    // items: FirebaseListObservable<any[]>;
-    //
-    // constructor(public item: ItemsService, private af: AngularFire){
-    //     this.items = af.database.list('/items');
-    // }
+    items: FirebaseListObservable<any[]>;
+
+    constructor(private af: AngularFire){
+        this.items = af.database.list('/items');
+        console.log(this.items);
+    }
 
 
 
