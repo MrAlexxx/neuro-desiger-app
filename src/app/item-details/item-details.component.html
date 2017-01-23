@@ -3,7 +3,7 @@
     <user-menu></user-menu>
 </div>
 <div #itemBox class="item-block" (dragstart)="onDragStart($event, itemBox)" (drag)="onDrag($event, itemBox)" (mouseup)="onDrop($event)" >
-    <item-details-menu></item-details-menu>
+    <item-details-menu [item]="item"></item-details-menu>
 
     <div class="circle-control left top"></div>
     <div class="circle-control left bottom"></div>

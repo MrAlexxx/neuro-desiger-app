@@ -3,10 +3,10 @@
 
     <!--<button  *ngFor="let button of menuButtons" [@button.id]="isOpenMenu" [ngClass]="['item-menu', 'absolute-center', button.btnClass ]"><span [ngClass]="['glyphicon', button.glypClass  ]"></span></button>-->
 
-    <!--todo: hide completely buttons when they invisible.-->
-    <button [@color]="isOpenMenu"  (@color.done)="animationDone()" [ngClass]="'item-menu absolute-center color'"><span [ngClass]="'glyphicon glyphicon-tint'"></span></button>
-    <button [@resize]="isOpenMenu" [ngClass]="'item-menu absolute-center resize'"><span [ngClass]="'glyphicon glyphicon-fullscreen'"></span></button>
-    <button [@info]="isOpenMenu"   [ngClass]="'item-menu absolute-center info'"><span [ngClass]="'glyphicon glyphicon-info-sign'"></span></button>
-    <button [@print]="isOpenMenu"  [ngClass]="'item-menu absolute-center print'"><span [ngClass]="'glyphicon glyphicon-print'"></span></button>
-    <button [@cart]="isOpenMenu"   [ngClass]="'item-menu absolute-center cart'"><span [ngClass]="'glyphicon glyphicon-shopping-cart'"></span></button>
+    <!--todo: hide completely buttons when they are invisible.-->
+    <a [@color]="isOpenMenu"  (@color.done)="animationDone()" [ngClass]="'item-menu absolute-center color'"><span [ngClass]="'glyphicon glyphicon-tint'"></span></a>
+    <a [@resize]="isOpenMenu" [ngClass]="'item-menu absolute-center resize'"><span [ngClass]="'glyphicon glyphicon-fullscreen'"></span></a>
+    <a [@info]="isOpenMenu"   [ngClass]="'item-menu absolute-center info'"><span [ngClass]="'glyphicon glyphicon-info-sign'"></span></a>
+    <a routerLink="ar/{{(item | async)?.$key}}" [@print]="isOpenMenu"  [ngClass]="'item-menu absolute-center print'"><span [ngClass]="'glyphicon glyphicon-eye-open'"></span></a>
+    <a [@cart]="isOpenMenu"   [ngClass]="'item-menu absolute-center cart'"><span [ngClass]="'glyphicon glyphicon-shopping-cart'"></span></a>
 </div>

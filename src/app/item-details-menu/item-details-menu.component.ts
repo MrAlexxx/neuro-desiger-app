@@ -1,4 +1,4 @@
-import { Component, trigger, state, style, transition, animate, keyframes } from '@angular/core';
+import { Component, trigger, state, style, transition, animate, keyframes, Input } from '@angular/core';
 
 import {default as menuAnimations} from '../menu-animatios';
 
@@ -37,6 +37,8 @@ import {default as menuAnimations} from '../menu-animatios';
 })
 
 export class ItemDetailsMenuComponent{
+    @Input() item;
+
     name: string;
     isOpenMenu: boolean;
     menuCircleClasses: any;
@@ -48,6 +50,7 @@ export class ItemDetailsMenuComponent{
 
     toggleMenu(){
         this.isOpenMenu = !this.isOpenMenu;
+        console.log(this.item);
     }
 
     animationDone(){

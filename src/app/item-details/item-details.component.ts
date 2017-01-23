@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild, Renderer, ElementRef, trigger, state, sty
 import { AngularFire, FirebaseListObservable, FirebaseObjectObservable } from "angularfire2";
 import 'rxjs/add/operator/map';
 import { async } from "rxjs/scheduler/async";
+import { ItemsService } from "../items.service";
 
 
 @Component({
@@ -9,7 +10,6 @@ import { async } from "rxjs/scheduler/async";
     selector: 'item-details',
     templateUrl: 'item-details.component.html',
     styleUrls: ['item-details.component.css'],
-    // providers: [ItemsService],
     animations:[
         trigger('menuMovement',[
             transition('0 => 1', [
@@ -42,63 +42,27 @@ export class ItemDetailsComponent implements OnInit{
     draggable: boolean;
 
     items: FirebaseObjectObservable<any[]>;
-    item: any;
+    item:  FirebaseObjectObservable<any>;
 
-    constructor(private af: AngularFire){
-        this.items = this.af.database.object('/items/sofa/'
-            // {
-            // query: {
-            //     orderByChild: 'name',
-            //     // limitToLast: 1 | 2
-            //
-            //     }
-            // }
-        );
-        this.getItem()
-
+    constructor(private itemService:ItemsService){
+        this.items = itemService.getItems();
+        this.item = itemService.getItem();
     }
 
-    getItem(id: number = 1) {
-        id = (id <= 0) ? 1 : id;
-        this.item = this.af.database.object('/items/sofa/'+id);
-        console.log(this.item);
-    }
 
     next(){
         this.item.subscribe(item => {
             console.log(item);
-            this.getItem(item.id + 1)
+            this.itemService.getItem(item.id + 1)
         });
     }
 
     prev(){
         this.item.subscribe(item => {
             console.log(item.id);
-            this.getItem(item.id - 1)
+            this.itemService.getItem(item.id - 1)
         });
     }
-
-    //@todo - refactor function "getItem"
-    // getItem(elem: number = 1) {
-    //     let t = this.af.database.object('/items/sofa/'+elem);
-    //     this.item = this.items.map((_item) => _item.filter((item, index) => index === elem ));
-    //     console.log(t, this.item);
-    //
-    // // }
-    //
-    // next(){
-    //     this.item.subscribe(item => {
-    //         console.log(item);
-    //         this.getItem(item[0].id + 1)
-    //     });
-    // }
-    //
-    // prev(){
-    //     this.item.subscribe(item => {
-    //         console.log(item);
-    //         this.getItem(item[0].id - 1)
-    //     });
-    // }
 
 
 
