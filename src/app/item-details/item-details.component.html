@@ -12,12 +12,12 @@
     <div class="circle-control right bottom"></div>
     <div class="circle-control bottom center"></div>
 
-    <img  class="item" src="../../img/items/{{img.src}}" alt="" >
+    <img  class="item" src="../../img/items/sofa{{(item | async)?.id}}.png" alt="{{(item | async)?.name}}" >
 </div>
 <div class="bottom-menu">
     <!--<a href="#" class="bottom-item title">NeuroDesigner</a>-->
 
-    <div class="bottom-item prev"><span class="glyphicon glyphicon-menu-left"></span></div>
-    <div class="bottom-item description">Crislyn Sofa</div>
-    <div class="bottom-item next"><span class="glyphicon glyphicon-menu-right"></span></div>
+    <div class="bottom-item prev" (click)="prev()"><span class="glyphicon glyphicon-menu-left"></span></div>
+    <div class="bottom-item description">{{(item | async)?.name}}</div>
+    <div class="bottom-item next" (click)="next()"><span class="glyphicon glyphicon-menu-right"></span></div>
 </div>

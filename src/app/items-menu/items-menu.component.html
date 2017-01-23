@@ -11,17 +11,27 @@
         <span [@hideShow]="isOpenMenu">Chose room type</span>
     </div>
 
-    <ul #menuItems class="menu-items" [style.overflow]="menuOverflow" [@animationMenuItem]="isOpenMenu" (@animationMenuItem.start)="animationItemStart()"  (@animationMenuItem.done)="animationDone()">
-        <li class="item" *ngFor="let item of items">
-            <a href="#">
-                <div class="svg-container">
-                    <svg [ngClass]="item.icon" width="50" height="50"><use attr.xlink:href="../../img/svgdefs.svg#{{item.icon}}"></use></svg>
-                </div>
-                <p>{{item.name}}</p>
-                <span class="small">{{item.qty}} items</span>
-            </a>
-        </li>
-    </ul>
+    <div class="menu-items-container">
+        <ul #menuItems class="menu-items" [style.overflow]="menuOverflow" [@animationMenuItem]="isOpenMenu" (@animationMenuItem.start)="animationItemStart()"  (@animationMenuItem.done)="animationDone()">
+            <li class="item" *ngFor="let item of items">
+                <a href="#">
+                    <div class="svg-container">
+                        <svg [ngClass]="item.icon" width="50" height="50"><use attr.xlink:href="../../img/svgdefs.svg#{{item.icon}}"></use></svg>
+                    </div>
+                    <p>{{item.name}}</p>
+                    <span class="small">{{item.qty}} items</span>
+                </a>
+            </li>
+        </ul>
+        <!--<ul class="menu-sub-item">-->
+            <!--<li class="sub-item">-->
+                <!--<img class="item-img" src="../../img/items/sofa7.png" alt="name"/>-->
+                <!--<div class="description">Crislyn Sofa</div>-->
+            <!--</li>-->
+            <!--<li class="sub-item"> item 2</li>-->
+            <!--<li class="sub-item"> item 3</li>-->
+        <!--</ul>-->
+    </div>
 
     <div class="footer" [@hideShow]="isOpenMenu">
         <svg class="icon_four-squares" width="10" height="10"><use xlink:href="../../img/svgdefs.svg#icon_four-squares"></use></svg>

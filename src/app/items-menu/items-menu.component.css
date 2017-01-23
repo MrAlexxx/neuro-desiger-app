@@ -77,11 +77,15 @@ color: #9c9c9c;
     font-size: 11px;
 }
 
-.menu-items{
+.menu-items-container{
     height: 72%;
+    margin: 0 2%;
+
+}
+
+.menu-items{
     overflow-y: auto;
     padding: 0;
-    margin: 0 2%;
     list-style: none;
 
     display: -webkit-box;
@@ -115,6 +119,19 @@ color: #9c9c9c;
 
 .item a:hover{
     background-color: #213c4e;
+}
+.menu-sub-item{
+    overflow-y: auto;
+    padding: 0;
+    list-style: none;
+    height: 100%;
+}
+
+.sub-item{
+    height: 15%;
+    border-top: 1px solid rgba(255, 255, 255, 0.28);
+    border-left: 1px solid rgba(255, 255, 255, 0.28);
+    border-right: 1px solid rgba(255, 255, 255, 0.28);
 }
 
 .svg-container{

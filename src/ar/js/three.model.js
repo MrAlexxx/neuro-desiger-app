@@ -17,7 +17,7 @@ manager.onProgress = function ( item, loaded, total ) {
 };
 
 var loader = new THREE.OBJLoader( manager );
-loader.load( '../models/sofa1.obj', function ( object ) {//sofa1.obj, round_sofa.obj ,sofa3.obj
+loader.load( '/ar/models/sofa1.obj', function ( object ) {//sofa1.obj, round_sofa.obj ,sofa3.obj
 
     // console.log(object);
     object.scale.multiplyScalar( 0.002 );
@@ -86,8 +86,8 @@ function blendingMaterial(obj) {
  * @returns {THREE.MeshBasicMaterial|MeshBasicMaterial|*}
  */
 function creatingMaterial() {
-    var textureDif = loadingTexture('velour_diffuse1.jpg');
-    var textureRef = loadingTexture('velour_reflection1.jpg');
+    var textureDif = loadingTexture('velour_diffuse.jpg');
+    var textureRef = loadingTexture('velour_reflection.jpg');
 
 
     // var material = new THREE.MeshPhongMaterial( { specular: 0x333333, shininess: 100, envMap: reflectionCube, combine: THREE.MixOperation, reflectivity: 0.1, perPixel: true } );
@@ -130,7 +130,7 @@ function loadingTexture(textureUrl) {
     var texture = new THREE.Texture();
     var loader = new THREE.ImageLoader( manager );
 
-     loader.load( '../models/texture/'+textureUrl, function ( image ) {
+     loader.load( '/ar/models/texture/'+textureUrl, function ( image ) {
             texture.image = image;
             texture.needsUpdate = true;
         } );

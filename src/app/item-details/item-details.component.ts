@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild, Renderer, ElementRef, trigger, state, style, transition, animate, keyframes} from '@angular/core';
-import { AngularFire, FirebaseListObservable } from "angularfire2";
-
+import { AngularFire, FirebaseListObservable, FirebaseObjectObservable } from "angularfire2";
+import 'rxjs/add/operator/map';
+import { async } from "rxjs/scheduler/async";
 
 
 @Component({
@@ -34,18 +35,71 @@ export class ItemDetailsComponent implements OnInit{
     // @ViewChild('itemBox') private itemBox: ElementRef;
     // @ContentChildren('list-item') items: QueryList<ElementRef>; // if we need the list of elements
 
-    img: any;
+
     isOpenMenu: boolean;
     isMinimized: boolean;
     dragPosition: any;
     draggable: boolean;
 
-    items: FirebaseListObservable<any[]>;
+    items: FirebaseObjectObservable<any[]>;
+    item: any;
 
     constructor(private af: AngularFire){
-        this.items = af.database.list('/items');
-        console.log(this.items);
+        this.items = this.af.database.object('/items/sofa/'
+            // {
+            // query: {
+            //     orderByChild: 'name',
+            //     // limitToLast: 1 | 2
+            //
+            //     }
+            // }
+        );
+        this.getItem()
+
     }
+
+    getItem(id: number = 1) {
+        id = (id <= 0) ? 1 : id;
+        this.item = this.af.database.object('/items/sofa/'+id);
+        console.log(this.item);
+    }
+
+    next(){
+        this.item.subscribe(item => {
+            console.log(item);
+            this.getItem(item.id + 1)
+        });
+    }
+
+    prev(){
+        this.item.subscribe(item => {
+            console.log(item.id);
+            this.getItem(item.id - 1)
+        });
+    }
+
+    //@todo - refactor function "getItem"
+    // getItem(elem: number = 1) {
+    //     let t = this.af.database.object('/items/sofa/'+elem);
+    //     this.item = this.items.map((_item) => _item.filter((item, index) => index === elem ));
+    //     console.log(t, this.item);
+    //
+    // // }
+    //
+    // next(){
+    //     this.item.subscribe(item => {
+    //         console.log(item);
+    //         this.getItem(item[0].id + 1)
+    //     });
+    // }
+    //
+    // prev(){
+    //     this.item.subscribe(item => {
+    //         console.log(item);
+    //         this.getItem(item[0].id - 1)
+    //     });
+    // }
+
 
 
 
@@ -53,11 +107,6 @@ export class ItemDetailsComponent implements OnInit{
         this.draggable = false;
         this.isOpenMenu = true;
         this.isMinimized = true;
-
-        this.img = {
-            'src': 'sofa7.png'
-        }
-        console.log(this.items);
     }
 
     // If you want to be notified of changes in a query list
@@ -80,7 +129,7 @@ export class ItemDetailsComponent implements OnInit{
     }
 
     onDrag(e: MouseEvent, element: any){
-
+        e.preventDefault();
         let top: string = (this.dragPosition._offsetY + e.pageY - this.dragPosition._startY) + 'px';
         let left: string = (this.dragPosition._offsetX + e.pageX - this.dragPosition._startX) + 'px';
 
@@ -89,11 +138,12 @@ export class ItemDetailsComponent implements OnInit{
             element.style.left = left;
         }
 
-        e.preventDefault();
+
     }
 
 
     onDrop(e: MouseEvent) {
+        e.preventDefault();
         this.draggable = false;
     }
 
@@ -105,6 +155,8 @@ export class ItemDetailsComponent implements OnInit{
     toogleClass(){
         this.isMinimized = !this.isMinimized;
     }
+
+
 
 }
 

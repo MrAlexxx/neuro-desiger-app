@@ -113,7 +113,7 @@ export class ItemsMenuComponent implements OnInit{
         this.items = ITEMS;
         this.isOpenMenu = true;
         this.menuClasses = {'menu': true, 'minimize': false};
-        this.menuOverflow = 'auto'
+        this.menuOverflow = 'hidden'
     }
 
     toggleMenu(){

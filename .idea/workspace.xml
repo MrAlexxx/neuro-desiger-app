@@ -2,108 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b33685d-64ff-477f-bbaa-d7525b7e2add" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/app.component.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/app.component.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/app.component.spec.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/app.component.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/app.module.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/enviroments/firebase.config.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/item-details-menu/item-details-menu.component.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/item-details-menu/item-details-menu.component.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/item-details-menu/item-details-menu.component.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/item-details/item-details.component.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/item-details/item-details.component.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/item-details/item-details.component.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/items-menu/items-menu.component.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/items-menu/items-menu.component.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/items-menu/items-menu.component.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/items.service.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/main.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/menu-animatios.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/user-menu/user-menu.component.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/user-menu/user-menu.component.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/user-menu/user-menu.component.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ar/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ar/js/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ar/js/material_library.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ar/js/three.model.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ar/models/Deer.obj" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ar/models/sofa1.obj" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ar/models/sofa1/St_vol.01_44_sofa.max" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ar/models/sofa1/l55040-sofa-malagasy-58678.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ar/models/sofa2.obj" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ar/models/sofa2/639162.57e3e27fedf0a.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ar/models/sofa2/modern_sofa.max" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ar/models/sofa3.obj" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ar/models/sofa3/l47180-sofa-6682.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ar/models/sofa3/sofa01.max" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ar/models/sofa4.obj" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ar/models/sofa4/Sofa.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ar/models/sofa4/Sofa.max" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ar/models/sofa5.obj" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ar/models/sofa5/ROUND SOFA 1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ar/models/sofa5/ROUND SOFA 2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ar/models/sofa5/ROUND SOFA 3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ar/models/sofa5/ROUND SOFA.mat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ar/models/texture/01.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ar/models/texture/02.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ar/models/texture/WK_Matrix_Pinie_Dunkel_Bump_01.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ar/models/texture/WK_Matrix_Pinie_Dunkel_Diffus_01.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ar/models/texture/WK_Wood_Teak_05_glos.jpg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ar/models/texture/cgsmap_fabric_velour_black_d.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ar/models/texture/cgsmap_fabric_velour_grey_d.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ar/models/texture/leather_diffuse.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ar/models/texture/leather_diffuse3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ar/models/texture/leather_reflection.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ar/models/texture/leather_reflection1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ar/models/texture/test.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ar/models/texture/velour_diffuse.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ar/models/texture/velour_reflection.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ar/vendor/js-aruco/LICENSE.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ar/vendor/js-aruco/aruco.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ar/vendor/js-aruco/cv.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ar/vendor/js-aruco/posit1-patched.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ar/vendor/js-aruco/posit1.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ar/vendor/js-aruco/posit2.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ar/vendor/js-aruco/svd.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ar/vendor/three.js/build/three.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ar/vendor/three.js/lib/MTLLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ar/vendor/three.js/lib/OBJLoader.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ar/vendor/three.js/lib/OrbitControls.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ar/vendor/three.js/lib/stats.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/DIN.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/bg1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/item-menu.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/items/default.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/items/sofa1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/items/sofa2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/items/sofa3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/items/sofa4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/items/sofa5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/items/sofa6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/items/sofa7.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/items/sofa8.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/svgdefs.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/users/clarkson.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/karma-test-shim.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/protractor.config.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/systemjs.config.extras.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/systemjs.config.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tsconfig.json" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.editorconfig" afterPath="$PROJECT_DIR$/.editorconfig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/e2e/app.e2e-spec.ts" afterPath="$PROJECT_DIR$/e2e/app.e2e-spec.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/karma.conf.js" afterPath="$PROJECT_DIR$/karma.conf.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tslint.json" afterPath="$PROJECT_DIR$/tslint.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/item-details/item-details.component.html" afterPath="$PROJECT_DIR$/src/app/item-details/item-details.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/item-details/item-details.component.ts" afterPath="$PROJECT_DIR$/src/app/item-details/item-details.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/items-menu/items-menu.component.css" afterPath="$PROJECT_DIR$/src/app/items-menu/items-menu.component.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/items-menu/items-menu.component.html" afterPath="$PROJECT_DIR$/src/app/items-menu/items-menu.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/items-menu/items-menu.component.ts" afterPath="$PROJECT_DIR$/src/app/items-menu/items-menu.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ar/js/three.model.js" afterPath="$PROJECT_DIR$/src/ar/js/three.model.js" />
     </list>
     <ignored path="neuro-desiger-app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -124,21 +30,88 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="items-menu.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/items-menu/items-menu.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-35">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="714">
+              <caret line="129" column="25" selection-start-line="129" selection-start-column="25" selection-end-line="129" selection-end-column="25" />
+              <folding>
+                <element signature="e#136#837#0" expanded="false" />
+                <element signature="e#1014#2762#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="items-menu.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/items-menu/items-menu.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="24" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".editorconfig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.editorconfig">
+      <file leaf-file-name="items-menu.component.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/items-menu/items-menu.component.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2210">
+              <caret line="130" column="15" selection-start-line="130" selection-start-column="15" selection-end-line="130" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="item-details.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/item-details/item-details.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="969">
+              <caret line="76" column="28" selection-start-line="74" selection-start-column="15" selection-end-line="76" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#137#0" expanded="true" />
+                <element signature="e#524#1222#0" expanded="false" />
+                <element signature="e#2413#2443#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ar/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="502">
+              <caret line="129" column="7" selection-start-line="129" selection-start-column="7" selection-end-line="129" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="material_library.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ar/js/material_library.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="three.model.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ar/js/three.model.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="665">
+              <caret line="75" column="38" selection-start-line="75" selection-start-column="38" selection-end-line="75" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="item-details.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/item-details/item-details.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -180,7 +153,6 @@
         <option value="$PROJECT_DIR$/app/items-menu/items-menu.component.css" />
         <option value="$PROJECT_DIR$/app/user-menu/user-menu.component.ts" />
         <option value="$PROJECT_DIR$/app/user-menu/user-menu.component.html" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/app/items-menu/items-menu.component.ts" />
         <option value="$PROJECT_DIR$/app/app.component.css" />
         <option value="$PROJECT_DIR$/app/app.component.html" />
@@ -194,6 +166,13 @@
         <option value="$PROJECT_DIR$/app/enviroments/firebase.config.ts" />
         <option value="$PROJECT_DIR$/app/app.module.ts" />
         <option value="$PROJECT_DIR$/app/item-details/item-details.component.ts" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/app/items-menu/items-menu.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/items-menu/items-menu.component.css" />
+        <option value="$PROJECT_DIR$/src/app/items-menu/items-menu.component.html" />
+        <option value="$PROJECT_DIR$/src/app/item-details/item-details.component.html" />
+        <option value="$PROJECT_DIR$/src/ar/js/three.model.js" />
+        <option value="$PROJECT_DIR$/src/app/item-details/item-details.component.ts" />
       </list>
     </option>
   </component>
@@ -238,7 +217,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -257,9 +235,24 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="neuro-desiger-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="neuro-desiger-app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -268,7 +261,7 @@
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ng2-three-demo-master" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="js.last.introduce.type" value="VAR" />
@@ -373,12 +366,16 @@
       <workItem from="1484209966506" duration="21473000" />
       <workItem from="1484297192507" duration="15858000" />
       <workItem from="1484650696827" duration="1308000" />
-      <workItem from="1484652274887" duration="279000" />
+      <workItem from="1484652274887" duration="4164000" />
+      <workItem from="1484727282062" duration="12732000" />
+      <workItem from="1484818129654" duration="14020000" />
+      <workItem from="1484902500156" duration="15616000" />
+      <workItem from="1485160755978" duration="8273000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="268687000" />
+    <option name="totallyTimeSpent" value="323213000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -391,15 +388,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12579957" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12899786" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32887402" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32887402" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32664436" sideWeight="0.4978678" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32664436" sideWeight="0.4978678" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -447,28 +444,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/three.model.js" />
-    <entry file="file://$PROJECT_DIR$/threex.imagegrabbing.js" />
-    <entry file="file://$PROJECT_DIR$/threex.jsarucomarker.js" />
-    <entry file="file://$PROJECT_DIR$/threex.videograbbing.js" />
-    <entry file="file://$PROJECT_DIR$/threex.webcamgrabbing.js" />
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Temp1_5964733-82865fbb7574e698cb56a9fd44f93ae9ca467b8e.zip/5964733-82865fbb7574e698cb56a9fd44f93ae9ca467b8e/OBJLoader.js" />
-    <entry file="file://$PROJECT_DIR$/vendor/three.js/build/three.js" />
-    <entry file="file://$PROJECT_DIR$/vendor/three.js/lib/OBJLoader.js" />
-    <entry file="file://$PROJECT_DIR$/../jsart/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../jsart/application.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/test.js" />
     <entry file="file://$PROJECT_DIR$/js/main.js" />
     <entry file="file://$PROJECT_DIR$/js/material_library.js" />
@@ -542,13 +517,6 @@
     <entry file="file://$PROJECT_DIR$/app/items-menu/items-menu.component.html" />
     <entry file="file://$PROJECT_DIR$/app/item-details/item-details.component.ts" />
     <entry file="file://$PROJECT_DIR$/systemjs.config.js" />
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/enviroments/firebase.config.ts" />
     <entry file="file://$PROJECT_DIR$/app/main.ts" />
     <entry file="file://$PROJECT_DIR$/app/app.module.ts" />
@@ -556,18 +524,110 @@
     <entry file="file://$PROJECT_DIR$/app/app.component.html" />
     <entry file="file://$PROJECT_DIR$/app/app.component.ts" />
     <entry file="file://$PROJECT_DIR$/index.html" />
+    <entry file="file://$PROJECT_DIR$/.editorconfig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-35">
+        <state relative-caret-position="118">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.editorconfig">
+    <entry file="file://$PROJECT_DIR$/src/app/items-menu/items-menu.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2210">
+          <caret line="130" column="15" selection-start-line="130" selection-start-column="15" selection-end-line="130" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/items-menu/items-menu.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="24" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/angularfire2/database/firebase_list_observable.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="12" column="15" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/items-menu/items-menu.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="129" column="25" selection-start-line="129" selection-start-column="25" selection-end-line="129" selection-end-column="25" />
+          <folding>
+            <element signature="e#136#837#0" expanded="false" />
+            <element signature="e#1014#2762#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/item-details/item-details.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/item-details/item-details.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="76" column="28" selection-start-line="74" selection-start-column="15" selection-end-line="76" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#137#0" expanded="true" />
+            <element signature="e#524#1222#0" expanded="false" />
+            <element signature="e#2413#2443#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ar/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="129" column="7" selection-start-line="129" selection-start-column="7" selection-end-line="129" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ar/js/material_library.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ar/js/three.model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="665">
+          <caret line="75" column="38" selection-start-line="75" selection-start-column="38" selection-end-line="75" selection-end-column="38" />
           <folding />
         </state>
       </provider>
