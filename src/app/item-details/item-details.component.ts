@@ -44,23 +44,23 @@ export class ItemDetailsComponent implements OnInit{
     items: FirebaseObjectObservable<any[]>;
     item:  FirebaseObjectObservable<any>;
 
-    constructor(private itemService:ItemsService){
-        this.items = itemService.getItems();
-        this.item = itemService.getItem();
+    constructor(private _itemService:ItemsService){
+        this.items = _itemService.getItems();
+        this.item = _itemService.getItem();
     }
 
 
-    next(){
+    next(): void{
         this.item.subscribe(item => {
             console.log(item);
-            this.itemService.getItem(item.id + 1)
+            this._itemService.getItem(item.id + 1)
         });
     }
 
-    prev(){
+    prev(): void{
         this.item.subscribe(item => {
             console.log(item.id);
-            this.itemService.getItem(item.id - 1)
+            this._itemService.getItem(item.id - 1)
         });
     }
 
@@ -92,7 +92,7 @@ export class ItemDetailsComponent implements OnInit{
 
     }
 
-    onDrag(e: MouseEvent, element: any){
+    onDrag(e: MouseEvent, element: any): void{
         e.preventDefault();
         let top: string = (this.dragPosition._offsetY + e.pageY - this.dragPosition._startY) + 'px';
         let left: string = (this.dragPosition._offsetX + e.pageX - this.dragPosition._startX) + 'px';
@@ -106,17 +106,17 @@ export class ItemDetailsComponent implements OnInit{
     }
 
 
-    onDrop(e: MouseEvent) {
+    onDrop(e: MouseEvent): void {
         e.preventDefault();
         this.draggable = false;
     }
 
-    onAnimate(arg: boolean){
+    onAnimate(arg: boolean): void{
         this.isOpenMenu = arg;
         console.log(arg);
     }
 
-    toogleClass(){
+    toogleClass(): void{
         this.isMinimized = !this.isMinimized;
     }
 
