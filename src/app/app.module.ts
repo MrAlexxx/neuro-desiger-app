@@ -10,13 +10,16 @@ import { firebaseConfig } from "../environments/firebase.config";
 //Router
 import { APP_ROUTERS } from "./app.routes";
 
+//Components
 import { AppComponent } from './app.component';
 import { ItemDetailsComponent } from "./item-details/item-details.component";
 import { ItemDetailsMenuComponent } from "./item-details-menu/item-details-menu.component";
 import { ItemsMenuComponent } from "./items-menu/items-menu.component";
 import { UserMenuComponent } from "./user-menu/user-menu.component";
-import { ArComponent } from '../ar/ar.component';
 import { ItemsService } from "./items.service";
+import { ArModule } from "../ar/ar.module";
+import { ArComponent } from "../ar/ar.component";
+
 
 @NgModule({
   declarations: [
@@ -32,7 +35,8 @@ import { ItemsService } from "./items.service";
     FormsModule,
     HttpModule,
     AngularFireModule.initializeApp(firebaseConfig),
-    APP_ROUTERS
+    APP_ROUTERS,
+    // ArModule
   ],
   providers: [
     //MyService, MyOtherService

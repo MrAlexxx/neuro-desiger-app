@@ -4,7 +4,6 @@ import 'rxjs/add/operator/map';
 import { async } from "rxjs/scheduler/async";
 import { ItemsService } from "../items.service";
 
-
 @Component({
     moduleId: module.id,
     selector: 'item-details',
@@ -47,22 +46,21 @@ export class ItemDetailsComponent implements OnInit{
     constructor(private _itemService:ItemsService){
         this.items = _itemService.getItems();
         this.item = _itemService.getItem();
+        this.getAllItems();
+        this.getItem();
     }
 
-
-    next(): void{
-        this.item.subscribe(item => {
-            console.log(item);
-            this._itemService.getItem(item.id + 1)
-        });
+    getAllItems(){
+        this.items = this._itemService.getItems();
     }
 
-    prev(): void{
-        this.item.subscribe(item => {
-            console.log(item.id);
-            this._itemService.getItem(item.id - 1)
-        });
+    getItem(id :number = 0): void{
+        this.item = this._itemService.getItem(id )
     }
+
+    next(): void{ this.item.subscribe(item => { this.getItem(item.id + 1) }); }
+
+    prev(): void{ this.item.subscribe(item => { this.getItem(item.id - 1) }); }
 
 
 

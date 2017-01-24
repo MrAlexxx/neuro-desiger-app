@@ -6,7 +6,6 @@ var THREEx = THREEx || {}
  */
 THREEx.JsArucoMarker = function(){
 	var _this = this
-	alert('0000');
 
 	this.debugEnabled = false
 	this.videoScaleDown = 2

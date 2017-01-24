@@ -1,24 +1,30 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { NgModule }           from '@angular/core';
+import { CommonModule }       from '@angular/common';
+import { FormsModule }        from '@angular/forms';
 import { HttpModule } from '@angular/http';
+
+//Components
 import { ArComponent } from "./ar.component";
+import { RenderComponent } from "./render.component";
+import { ItemsService } from "../items.service";
 
 
 
 @NgModule({
     declarations: [
-        ArComponent
+        ArComponent,
+        RenderComponent
     ],
     imports: [
-        BrowserModule,
+        CommonModule,
         FormsModule,
         HttpModule
     ],
     providers: [
         //MyService, MyOtherService
+        ItemsService
     ],
-    exports: [ArComponent]
+    exports: [ ArComponent ]
 
 })
-export class AppModule { }
+export class ArModule { }
