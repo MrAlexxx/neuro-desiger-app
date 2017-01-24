@@ -148,6 +148,7 @@ function renderAR() {
 
 function doAugmentedReality(){
     // init the marker recognition
+    //@todo: test with jsartoolkit
     var jsArucoMarker	= new THREEx.JsArucoMarker();
 
     // init the image source grabbing

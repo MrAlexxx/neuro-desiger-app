@@ -2,9 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b33685d-64ff-477f-bbaa-d7525b7e2add" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ar/render.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/app/item-details/item-details.component.ts" afterPath="$PROJECT_DIR$/src/app/item-details/item-details.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ar/index.html" afterPath="$PROJECT_DIR$/src/ar/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ar/js/main.js" afterPath="$PROJECT_DIR$/src/ar/js/main.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ar/vendor/js-aruco/LICENSE.txt" afterPath="$PROJECT_DIR$/src/vendor/js-aruco/LICENSE.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ar/vendor/js-aruco/aruco.js" afterPath="$PROJECT_DIR$/src/vendor/js-aruco/aruco.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ar/vendor/js-aruco/cv.js" afterPath="$PROJECT_DIR$/src/vendor/js-aruco/cv.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ar/vendor/js-aruco/posit1-patched.js" afterPath="$PROJECT_DIR$/src/vendor/js-aruco/posit1-patched.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ar/vendor/js-aruco/posit1.js" afterPath="$PROJECT_DIR$/src/vendor/js-aruco/posit1.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ar/vendor/js-aruco/posit2.js" afterPath="$PROJECT_DIR$/src/vendor/js-aruco/posit2.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ar/vendor/js-aruco/svd.js" afterPath="$PROJECT_DIR$/src/vendor/js-aruco/svd.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ar/vendor/three.js/build/three.js" afterPath="$PROJECT_DIR$/src/vendor/three.js/build/three.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ar/vendor/three.js/lib/MTLLoader.js" afterPath="$PROJECT_DIR$/src/vendor/three.js/lib/MTLLoader.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ar/vendor/three.js/lib/OBJLoader.js" afterPath="$PROJECT_DIR$/src/vendor/three.js/lib/OBJLoader.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ar/vendor/three.js/lib/OrbitControls.js" afterPath="$PROJECT_DIR$/src/vendor/three.js/lib/OrbitControls.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ar/vendor/three.js/lib/stats.min.js" afterPath="$PROJECT_DIR$/src/vendor/three.js/lib/stats.min.js" />
     </list>
     <ignored path="neuro-desiger-app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,15 +39,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="item-details.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/item-details/item-details.component.ts">
+      <file leaf-file-name="ar.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ar/ar.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="62" column="29" selection-start-line="62" selection-start-column="29" selection-end-line="62" selection-end-column="29" />
+            <state relative-caret-position="68">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="8" selection-end-column="2" />
               <folding>
-                <element signature="e#0#137#0" expanded="true" />
-                <element signature="e#539#1237#0" expanded="false" />
+                <element signature="e#0#50#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="render.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ar/render.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="3" selection-end-line="18" selection-end-column="4" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WebGLDeferredRenderer.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node_modules/three/examples/js/renderers/WebGLDeferredRenderer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="34" column="4" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="three.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/vendor/three.js/build/three.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -41,8 +86,18 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ar/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+            <state relative-caret-position="2567">
+              <caret line="151" column="44" selection-start-line="151" selection-start-column="39" selection-end-line="151" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ar.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ar/ar.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -51,9 +106,11 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ar/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="51" selection-start-line="2" selection-start-column="51" selection-end-line="2" selection-end-column="64" />
-              <folding />
+            <state relative-caret-position="306">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding>
+                <element signature="n#style#0;n#body#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -85,16 +142,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="item-details-menu.component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/item-details-menu/item-details-menu.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="items.service.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/items.service.ts">
           <provider selected="true" editor-type-id="text-editor">
@@ -102,18 +149,6 @@
               <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ar.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ar/ar.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#50#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -136,7 +171,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/vendor/three.js/lib/OBJLoader.js" />
         <option value="$PROJECT_DIR$/js/test.js" />
         <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/js/material_library.js" />
@@ -186,6 +220,8 @@
         <option value="$PROJECT_DIR$/src/app/items.service.ts" />
         <option value="$PROJECT_DIR$/src/app/item-details/item-details.component.ts" />
         <option value="$PROJECT_DIR$/src/ar/js/main.js" />
+        <option value="$PROJECT_DIR$/src/ar/render.component.ts" />
+        <option value="$PROJECT_DIR$/src/ar/index.html" />
       </list>
     </option>
   </component>
@@ -230,7 +266,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -278,6 +313,24 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="neuro-desiger-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="neuro-desiger-app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="ar" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -298,6 +351,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -313,6 +367,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\OpenServer\domains\neuro-desiger-app\src\vendor" />
+      <recent name="D:\OpenServer\domains\neuro-desiger-app\src" />
       <recent name="D:\OpenServer\domains\neuro-desiger-app\src\ar" />
       <recent name="D:\OpenServer\domains\neuro-desiger-app\img" />
     </key>
@@ -418,11 +474,12 @@
       <workItem from="1484902500156" duration="15616000" />
       <workItem from="1485160755978" duration="19150000" />
       <workItem from="1485247845505" duration="125000" />
+      <workItem from="1485249716147" duration="3232000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="334215000" />
+    <option name="totallyTimeSpent" value="337447000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -434,10 +491,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="1" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12953092" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13059701" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32887402" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.50319827" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -511,16 +568,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://D:/ND/Glyph/demo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/item-details-menu/item-details-menu.component.html" />
-    <entry file="file://$PROJECT_DIR$/app/item-details-menu/item-details-menu.component.ts" />
-    <entry file="file://$PROJECT_DIR$/img/svgdefs.svg" />
     <entry file="file://$PROJECT_DIR$/app/user-menu/user-menu.component.html" />
     <entry file="file://$PROJECT_DIR$/app/user-menu/user-menu.component.ts" />
     <entry file="file://$PROJECT_DIR$/style.css" />
@@ -633,13 +680,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ar/ar.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/user-menu/user-menu.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -706,16 +746,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ar/ar.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/items.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -731,25 +761,79 @@
         <state relative-caret-position="765">
           <caret line="62" column="29" selection-start-line="62" selection-start-column="29" selection-end-line="62" selection-end-column="29" />
           <folding>
-            <element signature="e#0#137#0" expanded="true" />
+            <element signature="e#0#137#0" expanded="false" />
             <element signature="e#539#1237#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ar/ar.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ar/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        <state relative-caret-position="2567">
+          <caret line="151" column="44" selection-start-line="151" selection-start-column="39" selection-end-line="151" selection-end-column="44" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ar/ar.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="8" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/three/examples/js/cameras/CombinedCamera.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vendor/three.js/build/three.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/three/examples/js/renderers/WebGLDeferredRenderer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="34" column="4" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ar/render.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="3" selection-end-line="18" selection-end-column="4" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ar/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="51" selection-start-line="2" selection-start-column="51" selection-end-line="2" selection-end-column="64" />
-          <folding />
+        <state relative-caret-position="306">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
