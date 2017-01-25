@@ -1,16 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Directive } from '@angular/core';
 // import {   } from "";
 
 
 // declare var THREE:any;
 // import WebGLRenderer = THREE.WebGLRenderer;
 
-@Component({
+@Directive({
     // moduleId: module.id,
     selector: 'render'
 })
 
-export class RenderComponent implements OnInit{
+export class RenderDirective implements OnInit{
 
         // scene = new THREE.scene();
     // camera	= new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 0.01, 2000);
@@ -34,7 +34,7 @@ export class RenderComponent implements OnInit{
     // this.renderD();
     // this.renderAR();
     ngOnInit() {
-        alert('sdfsd');
+
     }
 
     // init(){
