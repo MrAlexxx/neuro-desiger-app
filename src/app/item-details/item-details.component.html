@@ -1,23 +1,25 @@
-<div class="menu-wrapper" [@menuMovement]="isOpenMenu" (@menuMovement.done)="toogleClass()" [class.minimized]="isMinimized" >
-    <items-menu (onAnimate)="onAnimate($event)"></items-menu>
-    <user-menu></user-menu>
-</div>
-<div #itemBox class="item-block" (dragstart)="onDragStart($event, itemBox)" (drag)="onDrag($event, itemBox)" (mouseup)="onDrop($event)" >
-    <item-details-menu [item]="item"></item-details-menu>
+<div class="content">
+    <div class="menu-wrapper" [@menuMovement]="isOpenMenu" (@menuMovement.done)="toogleClass()" [class.minimized]="isMinimized" >
+        <items-menu (onAnimate)="onAnimate($event)"></items-menu>
+        <user-menu></user-menu>
+    </div>
+    <div #itemBox class="item-block" (dragstart)="onDragStart($event, itemBox)" (drag)="onDrag($event, itemBox)" (mouseup)="onDrop($event)" >
+        <item-details-menu [item]="item"></item-details-menu>
 
-    <div class="circle-control left top"></div>
-    <div class="circle-control left bottom"></div>
-    <div class="circle-control top  center"></div>
-    <div class="circle-control right top"></div>
-    <div class="circle-control right bottom"></div>
-    <div class="circle-control bottom center"></div>
+        <div class="circle-control left top"></div>
+        <div class="circle-control left bottom"></div>
+        <div class="circle-control top  center"></div>
+        <div class="circle-control right top"></div>
+        <div class="circle-control right bottom"></div>
+        <div class="circle-control bottom center"></div>
 
-    <img  class="item" src="../../img/items/sofa{{(item | async)?.id}}.png" alt="{{(item | async)?.name}}" >
-</div>
-<div class="bottom-menu">
-    <!--<a href="#" class="bottom-item title">NeuroDesigner</a>-->
+        <img  class="item" src="../../img/items/sofa{{(item | async)?.id}}.png" alt="{{(item | async)?.name}}" >
+    </div>
+    <div class="bottom-menu">
+        <!--<a href="#" class="bottom-item title">NeuroDesigner</a>-->
 
-    <div class="bottom-item prev" (click)="prev()"><span class="glyphicon glyphicon-menu-left"></span></div>
-    <div class="bottom-item description">{{(item | async)?.name}}</div>
-    <div class="bottom-item next" (click)="next()"><span class="glyphicon glyphicon-menu-right"></span></div>
+        <div class="bottom-item prev" (click)="prev()"><span class="glyphicon glyphicon-menu-left"></span></div>
+        <div class="bottom-item description">{{(item | async)?.name}}</div>
+        <div class="bottom-item next" (click)="next()"><span class="glyphicon glyphicon-menu-right"></span></div>
+    </div>
 </div>

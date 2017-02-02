@@ -5,10 +5,13 @@ import { HttpModule }         from '@angular/http';
 
 //Components
 import { ArComponent }        from "./ar.component";
-import { RenderDirective }    from "./render.directive";
 
 //Services
 import { ItemsService } from "../items.service";
+import { RenderService }    from "./render.service";
+import { OrbitControlsService } from "./controls/orbit-controls.service";
+import { ModelsService } from "./models/models.service";
+
 
 @NgModule({
     imports: [
@@ -17,11 +20,15 @@ import { ItemsService } from "../items.service";
         HttpModule
     ],
     declarations: [
-        ArComponent,
-        RenderDirective
+        ArComponent
     ],
     exports: [ ArComponent ],
-    providers: [ ItemsService ]
+    providers: [
+        ItemsService,
+        RenderService,
+        ModelsService
+        // OrbitControlsService
+    ]
 })
 
 export class ArModule { }
