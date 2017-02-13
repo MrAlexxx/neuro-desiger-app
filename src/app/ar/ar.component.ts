@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 import { ActivatedRoute } from "@angular/router";
 import { ItemsService } from "../items.service";
 import { RenderService } from "./render.service";
@@ -15,14 +15,20 @@ import { RenderService } from "./render.service";
 export class ArComponent implements OnInit {
 
   key: number;
-  container: HTMLElement;
+
+  @ViewChild('container')
+  private containerRef: ElementRef;
+
+  private get container() : HTMLElement {
+    return this.containerRef.nativeElement;
+  }
 
   constructor(private route: ActivatedRoute, private items:ItemsService, private _renderService: RenderService ) {
     this.key = route.snapshot.params['key']; //parameter from link
   }
 
   ngOnInit() {
-    this.container = document.getElementById('container');
+
     if (this.container) {
       this._renderService.init(this.container);
       this._renderService.renderD();

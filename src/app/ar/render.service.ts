@@ -7,13 +7,15 @@ import { Injectable } from "@angular/core";
 import * as THREE from 'three';
 
 var OrbitControls = require('three-orbit-controls')(THREE);
-// import OrbitControls = THREE.OrbitControls;
-// import { OrbitControlsService } from "./controls/orbit-controls.service";
+// import 'three-orbit-controls';
+// declare let OrbitControls;
 import PerspectiveCamera = THREE.PerspectiveCamera;
 import Renderer = THREE.WebGLRenderer;
 import Scene = THREE.Scene;
 import SpotLightHelper = THREE.SpotLightHelper;
 import SpotLight = THREE.SpotLight;
+import HemisphereLight = THREE.HemisphereLight;
+import DirectionalLight = THREE.DirectionalLight;
 
 import { ModelsService } from "./models/models.service";
 
@@ -21,13 +23,17 @@ import { ModelsService } from "./models/models.service";
 @Injectable()
 export class RenderService {
 
-    renderer: Renderer;
     scene: Scene;
     camera:	PerspectiveCamera;
-    onRenderFcts: any[];
+    renderer: Renderer;
+
     lightLeft: SpotLight;
     lightRight: SpotLight;
+    hemiLight:HemisphereLight;
+    dirLight:DirectionalLight;
     lightHelper: SpotLightHelper;
+
+    onRenderFcts: any[];
 
     // @ContentChild(OrbitControlsDirective) orbitDirective: OrbitControlsDirective;
     controls :any;
@@ -39,10 +45,7 @@ export class RenderService {
     //         this.container = value;
     // }
 
-    constructor(private _modelsService: ModelsService){
-        // _modelsService = new ModelsService(this.scene);
-        console.log('12312');
-    }
+    constructor(private _modelsService: ModelsService){   }
 
 
     init(container: HTMLElement): void{
@@ -69,6 +72,8 @@ export class RenderService {
         // Configuration of light
         this.lightLeft = new THREE.SpotLight( 0xffffff, 1 );
         this.lightRight	= new THREE.SpotLight( 0xffffff, 1 );
+        this.scene.add(this.lightLeft);
+        this.scene.add(this.lightRight);
         this.addLigting();
 
 
@@ -83,43 +88,49 @@ export class RenderService {
         // Bind to window resizes
         window.addEventListener('resize',() => this.onResize());
 
+        this.scene.add(this._modelsService.init());
+
         // Adding some debug helpers
         this.debugHelpers();
     }
 
     addLigting(){
-    //Left
-        this.lightLeft.name	= 'Left light';
-        this.lightLeft.intensity = 0.2;
-        this.lightLeft.position.set(-45, 25, 25);
-        this.lightLeft.visible = false;
-        this.scene.add(this.lightLeft);
 
-    //Right
+        // var light = new THREE.DirectionalLight( 0xffffff );
+        // light.position.set( 0, 1, 1 ).normalize();
+        // this.scene.add(light);
+    // //Left
+    //     this.lightLeft.name	= 'Left light';
+    //     this.lightLeft.intensity = 0.2;
+    //     this.lightLeft.position.set(-45, 25, 25);
+    //     this.lightLeft.visible = false;
+    //     this.scene.add(this.lightLeft);
+    //
+    // //Right
         this.lightRight.name	= 'Right light';
         this.lightRight.intensity = 0.2;
         this.lightRight.position.set(45, 25, 25);
         this.lightRight.visible = false;
         this.scene.add(this.lightRight);
-
+    // //
         this.lightHelper = new THREE.SpotLightHelper( this.lightRight );
         this.scene.add( this.lightHelper );
 
     // //********** OR **********//
     //
-    // //Hemisphere Light
-    //         hemiLight = new THREE.HemisphereLight( 0xffffff, 0xffffff, 0.6 );
-    //         hemiLight.groundColor.setHSL( 0.095, 1, 0.8);//255.222.179
-    //         hemiLight.intensity = 0.5;
-    //         hemiLight.position.set( 0, 50, 0 );
-    //         scene.add( hemiLight );
-    // //Directional Light
-    //         dirLight = new THREE.DirectionalLight( 0xffffff, 1 );
-    //         dirLight.color.setHSL( 0.1, 1, 0.95 );
-    //         dirLight.position.set( -1, 1.75, 1 );
-    //         dirLight.position.multiplyScalar( 50 );
-    //         dirLight.intensity = 0.52;
-    //         scene.add( dirLight );
+    //Hemisphere Light
+            this.hemiLight = new THREE.HemisphereLight( 0xffffff, 0xffffff, 0.6 );
+            this.hemiLight.groundColor.setHSL( 0.095, 1, 0.8);//255.222.179
+            this.hemiLight.intensity = 0.5;
+            this.hemiLight.position.set( 0, 50, 0 );
+            this.scene.add( this.hemiLight );
+    //Directional Light
+            this.dirLight = new THREE.DirectionalLight( 0xffffff, 1 );
+            this.dirLight.color.setHSL( 0.1, 1, 0.95 );
+            this.dirLight.position.set( -1, 1.75, 1 );
+            this.dirLight.position.multiplyScalar( 50 );
+            this.dirLight.intensity = 0.52;
+            this.scene.add( this.dirLight );
 
     }
 

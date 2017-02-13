@@ -6,6 +6,7 @@
  *
  * todo - implement tessellation [ficha: when user change the good, it destroying by using  tessellation] (https://threejs.org/examples/#webgl_modifier_tessellation)
  */
+///<reference path="../../../../node_modules/@types/three/index.d.ts"/>
 import { Injectable } from '@angular/core';
 
 import * as THREE from 'three';
@@ -13,28 +14,36 @@ import LoadingManager = THREE.LoadingManager;
 import MeshBasicMaterial = THREE.MeshBasicMaterial;
 import MeshPhongMaterial = THREE.MeshPhongMaterial;
 import Texture = THREE.Texture;
+import Scene = THREE.Scene;
+// import OBJLoader = THREE.OBJLoader;
 
-var OBJLoader = require('three-obj-loader')(THREE);
+// var OBJLoader = require('three-obj-loader');
+// import 'three-obj-loader';
+// declare let OBJLoader;
+
+var OBJLoader = require('three-obj-loader');
+OBJLoader(THREE);
+
 
 @Injectable()
 export class ModelsService {
-
     manager: LoadingManager = new THREE.LoadingManager();
+
     loader: any;
     OBJ: any;
 
     constructor() {
-        let scene;/////!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        this.manager.onProgress =  (item, loaded, total) => {
+        this.manager.onProgress = (item, loaded, total) => {
             console.log(item, loaded, total);
         };
+    }
 
-        console.log(OBJLoader);
-        // this.loader = new THREE.OBJLoader(this.manager);
+    init(){
+        this.loader = new THREE.OBJLoader(this.manager);
         //
-        // this.loader.load('/ar/models/sofa1.obj',  object => {//sofa1.obj, round_sofa.obj ,sofa3.obj
+        // this.loader.load('../../../models/sofa1.obj',  object => {//sofa1.obj, round_sofa.obj ,sofa3.obj
         //
-        //     // console.log(object);
+        //     console.log(object);
         //     object.scale.multiplyScalar(0.002);
         //     object.position.set(0, 0, 0);
         //     // object.rotation.z = .5*Math.PI;
@@ -43,11 +52,27 @@ export class ModelsService {
         //
         //     // object.material = new THREE.MeshPhongMaterial( { color: 0x4b4e4c, specular: 0xffffff, shading: 100 } );
         //
+        //
         //     this.blendingMaterial(object);
         //
-        //     scene.add(object);
+        //    // scene.add(object);
         //     this.OBJ = object;
+        //     console.log(this.OBJ);
         // }, ModelsService.onProgress, ModelsService.onError);
+/*******************************************************/
+        let textureDif = this.loadingTexture('velour_diffuse.jpg');
+        let geometry = new THREE.BoxGeometry( 1, 1, 1 );
+        let material = new THREE.MeshPhongMaterial( {
+            color: 0xffffff,
+            // color: 0xccddff,
+            envMap: textureDif,
+            refractionRatio: 0.98,
+            reflectivity: 0.9
+        } );// textile
+        let cube = new THREE.Mesh( geometry, material );
+       return cube;
+        /**********************************************/
+
     }
 
     static onProgress(xhr) {
@@ -89,6 +114,8 @@ export class ModelsService {
         // material.wrapAround = true;
         // material.wrapRGB.set( 0.5, 0.5, 0.5 );
         // material.side = THREE.DoubleSide;
+
+
         return new THREE.MeshPhongMaterial({
             specular: 0x333333,
             shininess: 2.5,
@@ -98,6 +125,7 @@ export class ModelsService {
             // vertexColors: THREE.FaceColors,
             // shading: THREE.SmoothShading
         }); // leather
+
 
         // return new THREE.MeshPhongMaterial({
         //     color: 0xaaaaaa,
@@ -123,7 +151,7 @@ export class ModelsService {
         let texture = new THREE.Texture();
         let loader = new THREE.ImageLoader(this.manager);
 
-        loader.load('/ar/models/texture/' + textureUrl, image => {
+        loader.load('../../../models/texture/' + textureUrl, image => {
             texture.image = image;
             texture.needsUpdate = true;
         });
