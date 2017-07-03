@@ -15,20 +15,14 @@ import MeshBasicMaterial = THREE.MeshBasicMaterial;
 import MeshPhongMaterial = THREE.MeshPhongMaterial;
 import Texture = THREE.Texture;
 import Scene = THREE.Scene;
-// import OBJLoader = THREE.OBJLoader;
 
-// var OBJLoader = require('three-obj-loader');
-// import 'three-obj-loader';
-// declare let OBJLoader;
-
-var OBJLoader = require('three-obj-loader');
+const OBJLoader = require('three-obj-loader');
 OBJLoader(THREE);
 
 
 @Injectable()
 export class ModelsService {
     manager: LoadingManager = new THREE.LoadingManager();
-
     loader: any;
     OBJ: any;
 
@@ -36,43 +30,67 @@ export class ModelsService {
         this.manager.onProgress = (item, loaded, total) => {
             console.log(item, loaded, total);
         };
+
+        this.loader = new THREE.OBJLoader(this.manager);
+
     }
 
-    init(){
-        this.loader = new THREE.OBJLoader(this.manager);
-        //
-        // this.loader.load('../../../models/sofa1.obj',  object => {//sofa1.obj, round_sofa.obj ,sofa3.obj
-        //
-        //     console.log(object);
-        //     object.scale.multiplyScalar(0.002);
-        //     object.position.set(0, 0, 0);
-        //     // object.rotation.z = .5*Math.PI;
-        //     // object.rotation.x = -.5*Math.PI;
-        //
-        //
-        //     // object.material = new THREE.MeshPhongMaterial( { color: 0x4b4e4c, specular: 0xffffff, shading: 100 } );
-        //
-        //
-        //     this.blendingMaterial(object);
-        //
-        //    // scene.add(object);
-        //     this.OBJ = object;
-        //     console.log(this.OBJ);
-        // }, ModelsService.onProgress, ModelsService.onError);
-/*******************************************************/
-        let textureDif = this.loadingTexture('velour_diffuse.jpg');
-        let geometry = new THREE.BoxGeometry( 1, 1, 1 );
-        let material = new THREE.MeshPhongMaterial( {
-            color: 0xffffff,
-            // color: 0xccddff,
-            envMap: textureDif,
-            refractionRatio: 0.98,
-            reflectivity: 0.9
-        } );// textile
-        let cube = new THREE.Mesh( geometry, material );
-       return cube;
-        /**********************************************/
+    addObject(scene:Scene, name:string="sofa1"){
 
+        this.loader.load('../../../models/'+name+'.obj',  object => {//sofa1.obj, round_sofa.obj ,sofa3.obj
+
+            console.log(object);
+            object.scale.multiplyScalar(0.02);
+            object.position.set(0, 0, 0);
+            // object.rotation.z = .5*Math.PI;
+            // object.rotation.x = -.5*Math.PI;
+
+
+            // object.material = new THREE.MeshPhongMaterial( { color: 0x4b4e4c, specular: 0xffffff, shading: 100 } );
+
+
+            this.blendingMaterial(object);
+
+           scene.add(object);
+            this.OBJ = object;
+            console.log(this.OBJ);
+        }, ModelsService.onProgress, ModelsService.onError);
+/*******************************************************/
+       //  let textureDif = this.loadingTexture('velour_diffuse.jpg');
+       //  let geometry = new THREE.BoxGeometry( 1, 1, 1 );
+       //  let material = new THREE.MeshPhongMaterial( {
+       //      color: 0xffffff,
+       //      // color: 0xccddff,
+       //      envMap: textureDif,
+       //      refractionRatio: 0.98,
+       //      reflectivity: 0.9
+       //  } );// textile
+       //  let cube = new THREE.Mesh( geometry, material );
+       // return cube;
+        /**********************************************/
+        // console.log(this.OBJ);
+        // return this.OBJ;
+    }
+
+    addObjectsSet(scene:Scene,name:string){
+        this.loader.load('../../../models/'+name+'.obj',  object => {//sofa1.obj, round_sofa.obj ,sofa3.obj
+
+            console.log(object);
+            object.scale.multiplyScalar(0.008);
+            object.position.set(0, 0, 0);
+            // object.rotation.z = .5*Math.PI;
+            // object.rotation.x = -.5*Math.PI;
+
+
+            // object.material = new THREE.MeshPhongMaterial( { color: 0x4b4e4c, specular: 0xffffff, shading: 100 } );
+
+
+            // this.blendingMaterial(object);
+
+            scene.add(object);
+            this.OBJ = object;
+            console.log(this.OBJ);
+        }, ModelsService.onProgress, ModelsService.onError);
     }
 
     static onProgress(xhr) {
@@ -116,26 +134,26 @@ export class ModelsService {
         // material.side = THREE.DoubleSide;
 
 
-        return new THREE.MeshPhongMaterial({
-            specular: 0x333333,
-            shininess: 2.5,
-            emissive: 2.5,
-            // morphTargets: true,
-            // morphNormals: true,
-            // vertexColors: THREE.FaceColors,
-            // shading: THREE.SmoothShading
-        }); // leather
-
-
         // return new THREE.MeshPhongMaterial({
-        //     color: 0xaaaaaa,
-        //     shininess: 1.5,
-        //     map: textureDif, /* bumpMap: texture, bumpScale: 0.15, */
-        //     // lightMap:textureRef,
-        //     combine: THREE.MixOperation,
-        //     reflectivity: 0.71,
-        //     shading: THREE.FlatShading
+        //     specular: 0x333333,
+        //     shininess: 2.5,
+        //     emissive: 2.5,
+        //     // morphTargets: true,
+        //     // morphNormals: true,
+        //     // vertexColors: THREE.FaceColors,
+        //     // shading: THREE.SmoothShading
         // }); // leather
+
+
+        return new THREE.MeshPhongMaterial({
+            color: 0xaaaaaa,
+            shininess: 1.5,
+            map: textureDif, /* bumpMap: texture, bumpScale: 0.15, */
+            // lightMap:textureRef,
+            combine: THREE.MixOperation,
+            reflectivity: 0.71,
+            shading: THREE.FlatShading
+        }); // leather
         // return new THREE.MeshPhongMaterial( { color: 0xccddff, envMap: textureDif, refractionRatio: 0.98, reflectivity: 0.9 } );// textile
 
     }

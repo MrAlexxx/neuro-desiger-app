@@ -6,7 +6,9 @@
 import { Injectable } from "@angular/core";
 import * as THREE from 'three';
 
-var OrbitControls = require('three-orbit-controls')(THREE);
+const OrbitControls = require('three-orbit-controls')(THREE);
+const JsArucoMarker = require('../../vendor/threex.jsarucomarker');
+const ImageGrabbing = require('../../vendor/threex.imagegrabbing');
 // import 'three-orbit-controls';
 // declare let OrbitControls;
 import PerspectiveCamera = THREE.PerspectiveCamera;
@@ -15,10 +17,9 @@ import Scene = THREE.Scene;
 import SpotLightHelper = THREE.SpotLightHelper;
 import SpotLight = THREE.SpotLight;
 import HemisphereLight = THREE.HemisphereLight;
+
 import DirectionalLight = THREE.DirectionalLight;
-
 import { ModelsService } from "./models/models.service";
-
 
 @Injectable()
 export class RenderService {
@@ -45,7 +46,11 @@ export class RenderService {
     //         this.container = value;
     // }
 
-    constructor(private _modelsService: ModelsService){   }
+    constructor(private _modelsService: ModelsService){
+        const ArucoMarker	= new JsArucoMarker();
+        console.log(ArucoMarker);
+        // ArucoMarker.detectMar
+    }
 
 
     init(container: HTMLElement): void{
@@ -88,49 +93,57 @@ export class RenderService {
         // Bind to window resizes
         window.addEventListener('resize',() => this.onResize());
 
-        this.scene.add(this._modelsService.init());
+
 
         // Adding some debug helpers
         this.debugHelpers();
     }
 
+    addItem(key:number = 1){
+        this._modelsService.addObject(this.scene, "sofa"+key);
+    }
+
+    addBanner(name:string){
+        this._modelsService.addObjectsSet(this.scene, name);
+    }
+
+
     addLigting(){
 
-        // var light = new THREE.DirectionalLight( 0xffffff );
-        // light.position.set( 0, 1, 1 ).normalize();
-        // this.scene.add(light);
-    // //Left
-    //     this.lightLeft.name	= 'Left light';
-    //     this.lightLeft.intensity = 0.2;
-    //     this.lightLeft.position.set(-45, 25, 25);
-    //     this.lightLeft.visible = false;
-    //     this.scene.add(this.lightLeft);
-    //
-    // //Right
+        const light = new THREE.DirectionalLight( 0xffffff );
+        light.position.set( 0, 1, 1 ).normalize();
+        this.scene.add(light);
+    //Left
+        this.lightLeft.name	= 'Left light';
+        this.lightLeft.intensity = 0.2;
+        this.lightLeft.position.set(-45, 25, 25);
+        this.lightLeft.visible = false;
+        this.scene.add(this.lightLeft);
+
+    //Right
         this.lightRight.name	= 'Right light';
         this.lightRight.intensity = 0.2;
         this.lightRight.position.set(45, 25, 25);
         this.lightRight.visible = false;
         this.scene.add(this.lightRight);
-    // //
+    //SpotLightHelper
         this.lightHelper = new THREE.SpotLightHelper( this.lightRight );
         this.scene.add( this.lightHelper );
 
-    // //********** OR **********//
-    //
+
     //Hemisphere Light
-            this.hemiLight = new THREE.HemisphereLight( 0xffffff, 0xffffff, 0.6 );
-            this.hemiLight.groundColor.setHSL( 0.095, 1, 0.8);//255.222.179
-            this.hemiLight.intensity = 0.5;
-            this.hemiLight.position.set( 0, 50, 0 );
-            this.scene.add( this.hemiLight );
+        this.hemiLight = new THREE.HemisphereLight( 0xffffff, 0xffffff, 0.6 );
+        this.hemiLight.groundColor.setHSL( 0.095, 1, 0.8);//255.222.179
+        this.hemiLight.intensity = 0.5;
+        this.hemiLight.position.set( 0, 50, 0 );
+        this.scene.add( this.hemiLight );
     //Directional Light
-            this.dirLight = new THREE.DirectionalLight( 0xffffff, 1 );
-            this.dirLight.color.setHSL( 0.1, 1, 0.95 );
-            this.dirLight.position.set( -1, 1.75, 1 );
-            this.dirLight.position.multiplyScalar( 50 );
-            this.dirLight.intensity = 0.52;
-            this.scene.add( this.dirLight );
+        this.dirLight = new THREE.DirectionalLight( 0xffffff, 1 );
+        this.dirLight.color.setHSL( 0.1, 1, 0.95 );
+        this.dirLight.position.set( -1, 1.75, 1 );
+        this.dirLight.position.multiplyScalar( 50 );
+        this.dirLight.intensity = 0.52;
+        this.scene.add( this.dirLight );
 
     }
 
@@ -142,7 +155,7 @@ export class RenderService {
         let meshObj = new THREE.Mesh(geometry, material);
         this.scene.add( meshObj );
 
-        var meshAx = new THREE.AxisHelper;
+        let meshAx = new THREE.AxisHelper;
         this.scene.add( meshAx );
     }
 
@@ -150,70 +163,72 @@ export class RenderService {
      * Rendering Augmented reality
      */
     renderAR() {
+
+        let renderer = this.renderer;
+        let camera = this.camera;
         // handle window resize
-        // window.addEventListener('resize', function(){
-        //     this.renderer.setSize( window.innerWidth, window.innerHeight );
-        //     this.camera.aspect	= window.innerWidth / window.innerHeight;
-        //     this.camera.updateProjectionMatrix()
-        // }, false);
-        //
-        // // set the scene as visible
-        // this.scene.visible = false;
-        //
-        // // render the scene
-        // this.onRenderFcts.push(function(){
-        //     this.renderer.render( this.scene, this.camera );
-        // });
-        //
-        // // run the rendering loop
-        // var previousTime = performance.now();
-        // requestAnimationFrame(function animate(now){
-        //
-        //     requestAnimationFrame( animate );
-        //
-        //     this.onRenderFcts.forEach(function(onRenderFct){
-        //         onRenderFct(now, now - previousTime)
-        //     });
-        //
-        //     previousTime = now;
-        // });
-        //
-        // this.doAugmentedReality();
+        window.addEventListener('resize', function(){
+            renderer.setSize( window.innerWidth, window.innerHeight );
+            camera.aspect	= window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix()
+        }, false);
+
+        // set the scene as visible
+        this.scene.visible = false;
+
+        // render the scene
+        this.onRenderFcts.push(function(){
+            this.renderer.render( this.scene, this.camera );
+        });
+
+        // run the rendering loop
+        let previousTime = performance.now();
+        requestAnimationFrame(function animate(now){
+
+            requestAnimationFrame( animate );
+
+            this.onRenderFcts.forEach(function(onRenderFct){
+                onRenderFct(now, now - previousTime)
+            });
+
+            previousTime = now;
+        });
+
+        this.doAugmentedReality();
 
     }
 
     doAugmentedReality(){
         // init the marker recognition
-      //   //@todo: test with jsartoolkit
-      //   var jsArucoMarker	= new THREEx.JsArucoMarker();
-      //
-      //   // init the image source grabbing
-      //
-      // if( true ){
-      //       var videoGrabbing = new THREEx.ImageGrabbing();
-      //       jsArucoMarker.videoScaleDown = 10
-      //   }else console.assert(false);
-      //
-      //   // attach the videoGrabbing.domElement to the body
-      //   document.body.appendChild(videoGrabbing.domElement);
-      //
-      //   // process the image source with the marker recognition
-      //   this.onRenderFcts.push(function() {
-      //       var domElement = videoGrabbing.domElement;
-      //       var markers = jsArucoMarker.detectMarkers(domElement);
-      //       var object3d = this.scene;
-      //
-      //       object3d.visible = false;
-      //
-      //       // see if this.markerId has been found
-      //       markers.forEach(function (marker) {
-      //           // if( marker.id !== 265 )	return
-      //
-      //           jsArucoMarker.markerToObject3D(marker, object3d);
-      //
-      //           object3d.visible = true
-      //       })
-      //   });
+        //@todo: test with jsartoolkit
+        const jsArucoMarker	= new JsArucoMarker();
+
+        // init the image source grabbing
+
+
+        const videoGrabbing = new ImageGrabbing();
+            jsArucoMarker.videoScaleDown = 10;
+
+        // attach the videoGrabbing.domElement to the body
+        document.body.appendChild(videoGrabbing.domElement);
+
+        // process the image source with the marker recognition
+        this.onRenderFcts.push(function() {
+            let domElement = videoGrabbing.domElement;
+            let markers = jsArucoMarker.detectMarkers(domElement);
+            let object3d = this.scene;
+
+            object3d.visible = false;
+
+            // see if this.markerId has been found
+            markers.forEach(function (marker) {
+                // if( marker.id !== 265 )	return
+
+                jsArucoMarker.markerToObject3D(marker, object3d);
+
+                object3d.visible = true
+            })
+        });
     }
 
     /**

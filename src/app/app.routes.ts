@@ -21,12 +21,14 @@
 import { provideRoutes, Routes, RouterModule } from "@angular/router";
 
 import { ItemDetailsComponent } from "./item-details/item-details.component";
+import { LandingComponent } from "./landing/landing.component";
 import { ModuleWithProviders } from "@angular/core";
 import { ArComponent } from "./ar/ar.component";
 
 
 export const APP_ROUTER: Routes = [
-    { path: '', component: ItemDetailsComponent },
+    { path: '', component: LandingComponent },
+    { path: 'items', component: ItemDetailsComponent },
     // { path: '', path: 'full', redirectTo: 'any url'},
     { path: 'ar/:key', component: ArComponent },
 ];

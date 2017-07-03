@@ -23,6 +23,7 @@ import { ItemsService } from "./items.service";
 
 //Modules
 import { ArModule }     from "./ar/ar.module";
+import { LandingModule } from "./landing/landing.module";
 
 
 
@@ -38,6 +39,7 @@ import { ArModule }     from "./ar/ar.module";
     BrowserModule,
     FormsModule,
     ArModule,
+    LandingModule,
     HttpModule,
     AngularFireModule.initializeApp(firebaseConfig),
     APP_ROUTERS

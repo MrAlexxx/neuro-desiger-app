@@ -32,6 +32,8 @@ export class ArComponent implements OnInit {
     if (this.container) {
       this._renderService.init(this.container);
       this._renderService.renderD();
+      this._renderService.addItem( this.key);
+
       // this._renderService.renderAR();
     }
   }
